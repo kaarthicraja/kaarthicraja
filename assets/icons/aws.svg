@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <defs>
+    <style>
+      .bg { fill: #1a1b26; transition: all 0.3s ease; transform-origin: center; }
+      .icon { transition: all 0.3s ease; transform-origin: center; }
+      svg:hover .bg { fill: #24283b; stroke: #FF9900; stroke-width: 2px; filter: drop-shadow(0 0 8px #FF9900); }
+      svg:hover .icon { transform: scale(1.1); filter: drop-shadow(0 0 5px #FF9900); }
+      
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #FF9900); }
+        50% { filter: drop-shadow(0 0 8px #FF9900); }
+      }
+      .icon { animation: pulse 3s infinite alternate; }
+    </style>
+  </defs>
+  
+  <circle class="bg" cx="50" cy="50" r="45" />
+  
+  <g class="icon" transform="translate(15, 30)">
+    <text x="35" y="20" font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">AWS</text>
+    <path d="M 10,25 Q 35,40 60,25" fill="none" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="58,22 65,22 60,28" fill="#FF9900" />
+  </g>
+</svg>

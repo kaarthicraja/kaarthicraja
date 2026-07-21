@@ -1,0 +1,14 @@
+{
+  "name": "kaarthicraja-profile",
+  "version": "1.0.0",
+  "description": "Automated GitHub profile generator for kaarthicraja",
+  "private": true,
+  "scripts": {
+    "generate-quote": "node scripts/generateQuote.js",
+    "lint": "echo 'No lint configured'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <defs>
+    <style>
+      .bg { fill: #1a1b26; transition: all 0.3s ease; transform-origin: center; }
+      .icon { transition: all 0.3s ease; transform-origin: center; }
+      svg:hover .bg { fill: #24283b; stroke: #FFD343; stroke-width: 2px; filter: drop-shadow(0 0 8px #FFD343); }
+      svg:hover .icon { transform: scale(1.1); filter: drop-shadow(0 0 5px #FFD343); }
+      
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #FFD343); }
+        50% { filter: drop-shadow(0 0 8px #FFD343); }
+      }
+      .icon { animation: pulse 3s infinite alternate; }
+    </style>
+  </defs>
+  
+  <circle class="bg" cx="50" cy="50" r="45" />
+  
+  <g class="icon" transform="translate(25, 20)">
+    <path d="M 25,5 C 10,5 10,20 10,20 L 10,25 L 30,25 L 30,30 L 15,30 C 5,30 5,45 15,45 L 30,45 L 30,40 L 20,40 C 15,40 15,35 20,35 L 40,35 L 40,20 C 40,5 25,5 25,5 Z" fill="#3776AB" />
+    <path d="M 25,55 C 40,55 40,40 40,40 L 40,35 L 20,35 L 20,30 L 35,30 C 45,30 45,15 35,15 L 20,15 L 20,20 L 30,20 C 35,20 35,25 30,25 L 10,25 L 10,40 C 10,55 25,55 25,55 Z" fill="#FFD343" />
+    <circle cx="20" cy="12" r="2" fill="#fff" />
+    <circle cx="30" cy="48" r="2" fill="#fff" />
+  </g>
+</svg>

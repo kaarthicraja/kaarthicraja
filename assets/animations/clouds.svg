@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="800" height="100">
+  <defs>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="100" fill="#1a1e2e"/>
+
+  <!-- Cloud 1 (back, slow) -->
+  <g opacity="0.4" filter="url(#soft)">
+    <animateTransform attributeName="transform" type="translate" values="0,0;800,0;-800,0" dur="30s" repeatCount="indefinite" calcMode="linear"/>
+    <ellipse cx="100" cy="65" rx="90" ry="28" fill="#2a3050"/>
+    <ellipse cx="145" cy="52" rx="55" ry="30" fill="#2a3050"/>
+    <ellipse cx="60" cy="55" rx="50" ry="25" fill="#2a3050"/>
+  </g>
+
+  <!-- Cloud 2 (back, slow) -->
+  <g opacity="0.4" filter="url(#soft)">
+    <animateTransform attributeName="transform" type="translate" values="-300,0;500,0;-300,0" dur="28s" repeatCount="indefinite" calcMode="linear"/>
+    <ellipse cx="600" cy="70" rx="80" ry="22" fill="#2a3050"/>
+    <ellipse cx="640" cy="57" rx="50" ry="26" fill="#2a3050"/>
+    <ellipse cx="560" cy="60" rx="45" ry="22" fill="#2a3050"/>
+  </g>
+
+  <!-- Cloud 3 (front, faster, neon tint) -->
+  <g opacity="0.6" filter="url(#soft)">
+    <animateTransform attributeName="transform" type="translate" values="0,0;800,0" dur="18s" repeatCount="indefinite" calcMode="linear"/>
+    <ellipse cx="200" cy="75" rx="110" ry="22" fill="#0d1a2e"/>
+    <ellipse cx="258" cy="58" rx="72" ry="30" fill="#0d1a2e"/>
+    <ellipse cx="145" cy="64" rx="60" ry="22" fill="#0d1a2e"/>
+    <!-- Subtle neon edge -->
+    <ellipse cx="258" cy="58" rx="72" ry="30" fill="none" stroke="#00f3ff" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- Cloud 4 (front, faster) -->
+  <g opacity="0.6" filter="url(#soft)">
+    <animateTransform attributeName="transform" type="translate" values="-400,0;400,0" dur="20s" repeatCount="indefinite" calcMode="linear"/>
+    <ellipse cx="650" cy="72" rx="100" ry="20" fill="#0d1a2e"/>
+    <ellipse cx="700" cy="58" rx="65" ry="28" fill="#0d1a2e"/>
+    <ellipse cx="605" cy="62" rx="55" ry="20" fill="#0d1a2e"/>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      .mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
+    </style>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1" height="2" fill="rgba(0,243,255,0.03)"/>
+    </pattern>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f3ff" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- BG -->
+  <rect width="900" height="280" fill="#0d0f14"/>
+  <rect width="900" height="280" fill="url(#grid)"/>
+  <rect width="900" height="280" fill="url(#scanlines)"/>
+
+  <!-- Aurora blobs -->
+  <ellipse cx="180" cy="80" rx="200" ry="80" fill="#00f3ff" opacity="0.04">
+    <animate attributeName="opacity" values="0.04;0.09;0.04" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="720" cy="200" rx="220" ry="90" fill="#bb9af7" opacity="0.04">
+    <animate attributeName="opacity" values="0.04;0.08;0.04" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Terminal border box -->
+  <rect x="30" y="20" width="840" height="240" rx="10" fill="none" stroke="#00f3ff" stroke-width="1.5" opacity="0.6" filter="url(#glow-soft)"/>
+
+  <!-- Corner accents -->
+  <line x1="30" y1="20" x2="80" y2="20" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="30" y1="20" x2="30" y2="70" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="870" y1="20" x2="820" y2="20" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="870" y1="20" x2="870" y2="70" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="30" y1="260" x2="80" y2="260" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="30" y1="260" x2="30" y2="210" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="870" y1="260" x2="820" y2="260" stroke="#00f3ff" stroke-width="2"/>
+  <line x1="870" y1="260" x2="870" y2="210" stroke="#00f3ff" stroke-width="2"/>
+
+  <!-- Header label -->
+  <rect x="370" y="14" width="160" height="14" fill="#0d0f14"/>
+  <text x="450" y="24" class="mono" font-size="11" fill="#00f3ff" text-anchor="middle" filter="url(#glow-soft)">[ DeveloperOS v3.2 ]</text>
+
+  <!-- Status dot -->
+  <circle cx="760" cy="42" r="5" fill="#00ff9f">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="775" y="47" class="mono" font-size="12" fill="#00ff9f">ONLINE</text>
+
+  <!-- System info lines -->
+  <text x="60" y="58" class="mono" font-size="13" fill="#4a5568">┌─────────────────────────────────────────────────────────────────────────────────────────┐</text>
+  <text x="60" y="78" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="78" class="mono" font-size="13" fill="#718096">User ............</text>
+  <text x="230" y="78" class="mono" font-size="13" fill="#00f3ff" filter="url(#glow-soft)">Kaarthic Raja</text>
+  <text x="60" y="98" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="98" class="mono" font-size="13" fill="#718096">Location ........</text>
+  <text x="230" y="98" class="mono" font-size="13" fill="#00f3ff">India 🇮🇳</text>
+  <text x="60" y="118" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="118" class="mono" font-size="13" fill="#718096">Stack ...........</text>
+  <text x="230" y="118" class="mono" font-size="13" fill="#bb9af7">Cloud | DevOps | Flutter | AI</text>
+
+  <!-- Divider -->
+  <text x="60" y="136" class="mono" font-size="13" fill="#4a5568">├─────────────────────────────────────────────────────────────────────────────────────────┤</text>
+
+  <!-- whoami section -->
+  <text x="60" y="156" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="156" class="mono" font-size="13" fill="#7ec8e3">$ whoami</text>
+
+  <!-- Role 1 -->
+  <text x="60" y="176" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="176" class="mono" font-size="13" fill="#00ff9f">▶</text>
+  <text x="96" y="176" class="mono" font-size="13" fill="#e2e8f0">Automation Builder</text>
+  <text x="60" y="196" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="196" class="mono" font-size="13" fill="#00ff9f">▶</text>
+  <text x="96" y="196" class="mono" font-size="13" fill="#e2e8f0">Linux Enthusiast</text>
+  <text x="60" y="216" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="216" class="mono" font-size="13" fill="#00ff9f">▶</text>
+  <text x="96" y="216" class="mono" font-size="13" fill="#e2e8f0">Flutter Developer</text>
+  <text x="60" y="236" class="mono" font-size="13" fill="#4a5568">│</text>
+  <text x="80" y="236" class="mono" font-size="13" fill="#00ff9f">▶</text>
+  <text x="96" y="236" class="mono" font-size="13" fill="#e2e8f0">Open Source Learner</text>
+
+  <!-- Blinking cursor at end -->
+  <rect x="255" y="223" width="9" height="15" fill="#00f3ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="60" y="258" class="mono" font-size="13" fill="#4a5568">└─────────────────────────────────────────────────────────────────────────────────────────┘</text>
+</svg>

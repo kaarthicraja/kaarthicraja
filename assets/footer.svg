@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" width="1000" height="200">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02050b" />
+      <stop offset="100%" stop-color="#040b16" />
+    </linearGradient>
+
+    <!-- Wave Gradients -->
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0044ff" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bc13fe" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#5500aa" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="wave3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0066ff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#001144" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Star Paths -->
+    <path id="star" d="M 0 -6 Q 0 0 6 0 Q 0 0 0 6 Q 0 0 -6 0 Q 0 0 0 -6 Z" fill="#00f3ff" filter="url(#glow)"/>
+    <path id="star-small" d="M 0 -3 Q 0 0 3 0 Q 0 0 0 3 Q 0 0 -3 0 Q 0 0 0 -3 Z" fill="#bc13fe" />
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- Floating Stars -->
+  <!-- We alternate between #star and #star-small for variety and depth -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="50 220; 50 -20" dur="12s" begin="0s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="12s" begin="0s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="150 230; 150 -20" dur="18s" begin="-3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.8; 0" dur="18s" begin="-3s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="250 210; 250 -20" dur="14s" begin="-8s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.9; 0" dur="14s" begin="-8s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="350 240; 350 -20" dur="16s" begin="-5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.7; 0" dur="16s" begin="-5s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="450 200; 450 -20" dur="10s" begin="-1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="10s" begin="-1s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="550 220; 550 -20" dur="20s" begin="-12s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.6; 0" dur="20s" begin="-12s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="650 190; 650 -20" dur="13s" begin="-4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="13s" begin="-4s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="750 230; 750 -20" dur="17s" begin="-9s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.8; 0" dur="17s" begin="-9s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="850 200; 850 -20" dur="11s" begin="-2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="11s" begin="-2s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="950 220; 950 -20" dur="15s" begin="-6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.7; 0" dur="15s" begin="-6s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="120 210; 120 -20" dur="14s" begin="-11s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.9; 0" dur="14s" begin="-11s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="310 230; 310 -20" dur="19s" begin="-7s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.7; 0" dur="19s" begin="-7s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="480 220; 480 -20" dur="12s" begin="-3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="12s" begin="-3s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="720 240; 720 -20" dur="16s" begin="-10s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.6; 0" dur="16s" begin="-10s" repeatCount="indefinite" />
+    <use href="#star-small" />
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="880 190; 880 -20" dur="18s" begin="-1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 0.8; 0" dur="18s" begin="-1s" repeatCount="indefinite" />
+    <use href="#star" />
+  </g>
+
+  <!-- Animated Waves -->
+  <!-- Wave 3 (Background, slower, moving left) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; -500 0" dur="12s" repeatCount="indefinite" />
+    <path d="M 0 130 Q 125 100, 250 130 T 500 130 T 750 130 T 1000 130 T 1250 130 T 1500 130 T 1750 130 T 2000 130 V 210 H 0 Z" fill="url(#wave3)" />
+  </g>
+
+  <!-- Wave 2 (Middle, medium speed, moving left) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; -1000 0" dur="8s" repeatCount="indefinite" />
+    <path d="M 0 140 Q 250 180, 500 140 T 1000 140 T 1500 140 T 2000 140 V 210 H 0 Z" fill="url(#wave2)" />
+  </g>
+
+  <!-- Wave 1 (Foreground, faster, moving left with Neon Glow) -->
+  <g filter="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="0 0; -1000 0" dur="5s" repeatCount="indefinite" />
+    <path d="M 0 150 Q 250 100, 500 150 T 1000 150 T 1500 150 T 2000 150 V 210 H 0 Z" fill="url(#wave1)" />
+  </g>
+</svg>

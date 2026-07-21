@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" height="200">
+  <defs>
+    <style>.mono { font-family: 'Courier New', monospace; }</style>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="bar-cloud" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00f3ff"/>
+    </linearGradient>
+    <linearGradient id="bar-devops" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#bb9af7"/>
+    </linearGradient>
+    <linearGradient id="bar-flutter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#54C5F8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#54C5F8"/>
+    </linearGradient>
+    <linearGradient id="bar-ai" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff9f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00ff9f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="200" fill="#0d0f14" rx="10"/>
+  <rect x="1" y="1" width="698" height="198" fill="none" stroke="#00f3ff" stroke-width="1" rx="10" opacity="0.3"/>
+
+  <text x="30" y="35" class="mono" font-size="14" fill="#718096">// skills.matrix</text>
+
+  <!-- Cloud Engineering -->
+  <text x="30" y="65" class="mono" font-size="13" fill="#00f3ff">Cloud Engineering</text>
+  <rect x="200" y="52" width="460" height="14" fill="#1a1b26" rx="7"/>
+  <rect x="200" y="52" width="0" height="14" fill="url(#bar-cloud)" rx="7">
+    <animate attributeName="width" from="0" to="414" dur="1.5s" fill="freeze" begin="0.2s"/>
+  </rect>
+  <text x="626" y="64" class="mono" font-size="11" fill="#00f3ff">90%</text>
+
+  <!-- DevOps -->
+  <text x="30" y="100" class="mono" font-size="13" fill="#bb9af7">DevOps / CI-CD</text>
+  <rect x="200" y="87" width="460" height="14" fill="#1a1b26" rx="7"/>
+  <rect x="200" y="87" width="0" height="14" fill="url(#bar-devops)" rx="7">
+    <animate attributeName="width" from="0" to="391" dur="1.5s" fill="freeze" begin="0.4s"/>
+  </rect>
+  <text x="614" y="99" class="mono" font-size="11" fill="#bb9af7">85%</text>
+
+  <!-- Flutter -->
+  <text x="30" y="135" class="mono" font-size="13" fill="#54C5F8">Flutter / Mobile</text>
+  <rect x="200" y="122" width="460" height="14" fill="#1a1b26" rx="7"/>
+  <rect x="200" y="122" width="0" height="14" fill="url(#bar-flutter)" rx="7">
+    <animate attributeName="width" from="0" to="368" dur="1.5s" fill="freeze" begin="0.6s"/>
+  </rect>
+  <text x="602" y="134" class="mono" font-size="11" fill="#54C5F8">80%</text>
+
+  <!-- AI Automation -->
+  <text x="30" y="170" class="mono" font-size="13" fill="#00ff9f">AI Automation</text>
+  <rect x="200" y="157" width="460" height="14" fill="#1a1b26" rx="7"/>
+  <rect x="200" y="157" width="0" height="14" fill="url(#bar-ai)" rx="7">
+    <animate attributeName="width" from="0" to="322" dur="1.5s" fill="freeze" begin="0.8s"/>
+  </rect>
+  <text x="542" y="169" class="mono" font-size="11" fill="#00ff9f">70%</text>
+</svg>

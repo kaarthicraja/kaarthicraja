@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <defs>
+    <style>
+      .bg { fill: #1a1b26; transition: all 0.3s ease; transform-origin: center; }
+      .icon { transition: all 0.3s ease; transform-origin: center; }
+      svg:hover .bg { fill: #24283b; stroke: #FCC624; stroke-width: 2px; filter: drop-shadow(0 0 8px #FCC624); }
+      svg:hover .icon { transform: scale(1.1); filter: drop-shadow(0 0 5px #FCC624); }
+      
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #FCC624); }
+        50% { filter: drop-shadow(0 0 8px #FCC624); }
+      }
+      .icon { animation: pulse 3s infinite alternate; }
+    </style>
+  </defs>
+  
+  <circle class="bg" cx="50" cy="50" r="45" />
+  
+  <g class="icon" transform="translate(25, 10)">
+    <ellipse cx="25" cy="45" rx="20" ry="25" fill="#e5e5e5" stroke="#333" stroke-width="4" />
+    <ellipse cx="5" cy="50" rx="8" ry="15" fill="#333" transform="rotate(30 5 50)" />
+    <ellipse cx="45" cy="50" rx="8" ry="15" fill="#333" transform="rotate(-30 45 50)" />
+    <ellipse cx="25" cy="50" rx="15" ry="20" fill="#fff" />
+    <circle cx="18" cy="30" r="4" fill="#fff" />
+    <circle cx="18" cy="30" r="2" fill="#333" />
+    <circle cx="32" cy="30" r="4" fill="#fff" />
+    <circle cx="32" cy="30" r="2" fill="#333" />
+    <polygon points="20,35 30,35 25,42" fill="#FCC624" />
+  </g>
+</svg>

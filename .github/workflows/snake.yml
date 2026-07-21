@@ -1,0 +1,49 @@
+##############################################################################
+# snake.yml — GitHub Contribution Grid Snake Animation
+#
+# HOW IT WORKS:
+#   1. Triggers on every push to `main`, on a daily cron, and manually.
+#   2. Uses the official `Platane/snk@v3` action which reads your public
+#      GitHub contribution calendar via the GitHub API.
+#   3. Generates two SVGs:
+#      - assets/generated/github-contribution-grid-snake.svg       (light mode)
+#      - assets/generated/github-contribution-grid-snake-dark.svg  (dark mode)
+#   4. The `gh-pages` action commits and pushes both files directly to the
+#      `main` branch using GITHUB_TOKEN — no PAT required.
+#   5. The README uses a <picture> tag to automatically serve the correct
+#      variant based on the user's system color preference.
+##############################################################################
+name: 🐍 Generate Contribution Snake
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 1 * * *'   # 01:00 UTC daily (offset from quote job)
+  workflow_dispatch:
+
+jobs:
+  generate-snake:
+    name: Generate Snake SVG
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: kaarthicraja
+          outputs: |
+            assets/generated/github-contribution-grid-snake.svg
+            assets/generated/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: 📤 Commit & Push Snake SVGs
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'assets/generated/github-contribution-grid-snake*.svg'
+          message: 'chore(auto): update contribution snake [skip ci]'
+          default_author: github_actions

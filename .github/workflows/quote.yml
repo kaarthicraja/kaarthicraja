@@ -1,0 +1,50 @@
+##############################################################################
+# quote.yml — Daily Programming Quote Generator
+#
+# HOW IT WORKS:
+#   1. Triggers on a cron schedule every day at 00:00 UTC, or manually via
+#      the GitHub Actions UI (workflow_dispatch).
+#   2. Checks out the repository using GITHUB_TOKEN (no PAT required).
+#   3. Sets up Node.js 18.
+#   4. Runs `scripts/generateQuote.js` which reads `quotes.json`, picks a
+#      random quote, and writes a styled SVG to `assets/generated/quote.svg`.
+#   5. If the output file changed, the bot commits and pushes back to main.
+#      The `[skip ci]` flag prevents an infinite workflow loop.
+##############################################################################
+name: 🗒️ Generate Daily Quote
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 00:00 UTC daily
+  workflow_dispatch:        # manual trigger from Actions UI
+
+jobs:
+  generate-quote:
+    name: Generate Quote SVG
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to push the generated SVG back
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️  Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 🖊️  Generate Quote SVG
+        run: node scripts/generateQuote.js
+
+      - name: 📤 Commit & Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+          git add assets/generated/quote.svg
+          if git diff --cached --quiet; then
+            echo "ℹ️  No changes to commit."
+          else
+            git commit -m "chore(auto): update daily quote svg [skip ci]"
+            git push
+          fi

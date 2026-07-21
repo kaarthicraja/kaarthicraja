@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <defs>
+    <style>
+      .bg { fill: #1a1b26; transition: all 0.3s ease; transform-origin: center; }
+      .icon { transition: all 0.3s ease; transform-origin: center; }
+      svg:hover .bg { fill: #24283b; stroke: #326CE5; stroke-width: 2px; filter: drop-shadow(0 0 8px #326CE5); }
+      svg:hover .icon { transform: scale(1.1); filter: drop-shadow(0 0 5px #326CE5); }
+      
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #326CE5); }
+        50% { filter: drop-shadow(0 0 8px #326CE5); }
+      }
+      .icon { animation: pulse 3s infinite alternate; }
+    </style>
+  </defs>
+  
+  <circle class="bg" cx="50" cy="50" r="45" />
+  
+  <g class="icon" transform="translate(20, 20)">
+    <polygon points="30,0 53,11 60,35 48,56 12,56 0,35 7,11" fill="#326CE5" />
+    <circle cx="30" cy="28" r="12" fill="none" stroke="#fff" stroke-width="2" />
+    <line x1="30" y1="16" x2="30" y2="5" stroke="#fff" stroke-width="2" />
+    <line x1="30" y1="40" x2="30" y2="51" stroke="#fff" stroke-width="2" />
+    <line x1="18" y1="28" x2="7" y2="28" stroke="#fff" stroke-width="2" />
+    <line x1="42" y1="28" x2="53" y2="28" stroke="#fff" stroke-width="2" />
+    <line x1="22" y1="20" x2="14" y2="12" stroke="#fff" stroke-width="2" />
+    <line x1="38" y1="36" x2="46" y2="44" stroke="#fff" stroke-width="2" />
+    <line x1="22" y1="36" x2="14" y2="44" stroke="#fff" stroke-width="2" />
+    <line x1="38" y1="20" x2="46" y2="12" stroke="#fff" stroke-width="2" />
+  </g>
+</svg>

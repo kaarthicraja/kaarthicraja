@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <defs>
+    <style>
+      .bg { fill: #1a1b26; transition: all 0.3s ease; transform-origin: center; }
+      .icon { transition: all 0.3s ease; transform-origin: center; }
+      svg:hover .bg { fill: #24283b; stroke: #2496ED; stroke-width: 2px; filter: drop-shadow(0 0 8px #2496ED); }
+      svg:hover .icon { transform: scale(1.1); filter: drop-shadow(0 0 5px #2496ED); }
+      
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #2496ED); }
+        50% { filter: drop-shadow(0 0 8px #2496ED); }
+      }
+      .icon { animation: pulse 3s infinite alternate; }
+    </style>
+  </defs>
+  
+  <circle class="bg" cx="50" cy="50" r="45" />
+  
+  <g class="icon" transform="translate(15, 25)">
+    <path d="M 10,40 Q 10,55 35,55 Q 60,55 70,40 Q 75,30 65,30 Q 55,30 50,35 Q 30,35 25,30 Q 20,25 10,40 Z" fill="#2496ED"/>
+    <rect x="25" y="15" width="8" height="8" fill="#2496ED" />
+    <rect x="35" y="15" width="8" height="8" fill="#2496ED" />
+    <rect x="35" y="5" width="8" height="8" fill="#2496ED" />
+    <rect x="45" y="15" width="8" height="8" fill="#2496ED" />
+    <circle cx="60" cy="40" r="2" fill="#fff" />
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f3ff" stroke-width="0.4" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="120" fill="#0d0f14"/>
+  <rect width="900" height="120" fill="url(#grid)"/>
+
+  <!-- Aurora left -->
+  <ellipse cx="150" cy="60" rx="250" ry="60" fill="#00f3ff" opacity="0.06">
+    <animate attributeName="rx" values="250;280;250" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Aurora right -->
+  <ellipse cx="750" cy="60" rx="250" ry="60" fill="#bb9af7" opacity="0.06">
+    <animate attributeName="rx" values="250;220;250" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Horizontal scanning line -->
+  <line x1="0" y1="0" x2="900" y2="0" stroke="#00f3ff" stroke-width="1.5" opacity="0.4">
+    <animate attributeName="y1" values="0;120;0" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0;120;0" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="4s" repeatCount="indefinite"/>
+  </line>
+</svg>

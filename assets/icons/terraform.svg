@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <defs>
+    <style>
+      .bg { fill: #1a1b26; transition: all 0.3s ease; transform-origin: center; }
+      .icon { transition: all 0.3s ease; transform-origin: center; }
+      svg:hover .bg { fill: #24283b; stroke: #844FBA; stroke-width: 2px; filter: drop-shadow(0 0 8px #844FBA); }
+      svg:hover .icon { transform: scale(1.1); filter: drop-shadow(0 0 5px #844FBA); }
+      
+      @keyframes pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #844FBA); }
+        50% { filter: drop-shadow(0 0 8px #844FBA); }
+      }
+      .icon { animation: pulse 3s infinite alternate; }
+    </style>
+  </defs>
+  
+  <circle class="bg" cx="50" cy="50" r="45" />
+  
+  <g class="icon" transform="translate(25, 15)">
+    <polygon points="15,10 30,20 30,35 15,25" fill="#844FBA" />
+    <polygon points="15,30 30,40 30,55 15,45" fill="#844FBA" opacity="0.8" />
+    <polygon points="35,20 50,30 50,45 35,35" fill="#844FBA" opacity="0.9" />
+    <polygon points="35,40 50,50 50,65 35,55" fill="#844FBA" opacity="0.7" />
+  </g>
+</svg>
