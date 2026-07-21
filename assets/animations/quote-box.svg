@@ -1,20 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" width="700" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 110" width="750" height="110">
   <defs>
-    <style>.mono { font-family: 'Courier New', monospace; }</style>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="glow-sm">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <!-- Glassmorphism: blur not supported in GitHub SVG, simulate with opacity layers -->
   </defs>
-  <rect width="700" height="100" fill="#0d0f14" rx="10"/>
 
-  <!-- Animated corner dashes -->
-  <rect x="2" y="2" width="696" height="96" rx="10" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-dasharray="12,6" filter="url(#glow)" opacity="0.6">
-    <animateTransform attributeName="stroke-dashoffset" type="translate" values="0;36;0" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="stroke-dashoffset" values="0;36;0" dur="3s" repeatCount="indefinite"/>
+  <!-- Glass background -->
+  <rect width="750" height="110" fill="#0d1117" rx="10"/>
+  <!-- Frosted panel -->
+  <rect x="2" y="2" width="746" height="106" fill="#ffffff" fill-opacity="0.03" rx="9"/>
+  <!-- Neon border -->
+  <rect x="1" y="1" width="748" height="108" fill="none" stroke="#00f3ff" stroke-width="1.5" rx="10"
+        stroke-dasharray="12,6" filter="url(#glow-sm)">
+    <animate attributeName="stroke-dashoffset" values="0;36;0" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Decorative quotes marks -->
-  <text x="18" y="75" class="mono" font-size="72" fill="#00f3ff" opacity="0.12">"</text>
-  <text x="662" y="88" class="mono" font-size="72" fill="#00f3ff" opacity="0.12">"</text>
+  <!-- Left accent -->
+  <rect x="0" y="15" width="4" height="80" fill="#bc13fe" rx="2"/>
+
+  <!-- Terminal-style header -->
+  <text x="16" y="26" font-family="'Courier New', monospace" font-size="11" fill="#4a5568">kaarthic@os:~$ cat wisdom.txt</text>
+
+  <!-- Decorative opening quote -->
+  <text x="22" y="78" font-family="Georgia, serif" font-size="60" fill="#00f3ff" opacity="0.08">"</text>
+
+  <!-- Quote text — crisp, no filter -->
+  <text x="50" y="62" font-family="'Courier New', monospace" font-size="15" fill="#00f3ff" font-weight="bold" id="qt1">Talk is cheap. Show me the code.</text>
+  <text x="50" y="80" font-family="'Courier New', monospace" font-size="13" fill="#4a6080" font-style="italic">— auto-updated by GitHub Actions every 24h</text>
+
+  <!-- Author placeholder  -->
+  <text x="710" y="98" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7" text-anchor="end">~ Linus Torvalds</text>
+
+  <!-- Animated cursor at end of quote line -->
+  <rect x="680" y="50" width="8" height="14" fill="#00f3ff">
+    <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+  </rect>
 </svg>

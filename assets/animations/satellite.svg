@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="240" height="240" fill="#0a0c12"/>
+
+  <!-- Stars -->
+  <circle cx="20" cy="30" r="1" fill="#fff"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.1s" repeatCount="indefinite"/></circle>
+  <circle cx="200" cy="20" r="1.2" fill="#00f3ff"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.3s" repeatCount="indefinite"/></circle>
+  <circle cx="140" cy="40" r="1" fill="#fff"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.9s" repeatCount="indefinite"/></circle>
+  <circle cx="60" cy="200" r="1" fill="#bb9af7"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.7s" repeatCount="indefinite"/></circle>
+
+  <!-- Orbit path -->
+  <ellipse cx="120" cy="120" rx="80" ry="35" fill="none" stroke="#00f3ff" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Earth (center) -->
+  <circle cx="120" cy="120" r="28" fill="#0277bd"/>
+  <circle cx="120" cy="120" r="28" fill="none" stroke="#4fc3f7" stroke-width="4" opacity="0.2"/>
+  <ellipse cx="108" cy="114" rx="12" ry="9" fill="#2e7d32" opacity="0.9"/>
+  <ellipse cx="128" cy="122" rx="8" ry="10" fill="#388e3c" opacity="0.9"/>
+  <circle cx="120" cy="120" r="28" fill="none" stroke="#4fc3f7" stroke-width="8" opacity="0.1"/>
+  <!-- Earth glow -->
+  <circle cx="120" cy="120" r="30" fill="none" stroke="#00f3ff" stroke-width="1.5" opacity="0.4" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Satellite body orbiting -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="0 120 120;360 120 120" dur="6s" repeatCount="indefinite" calcMode="linear"/>
+    <!-- satellite on orbit at right -->
+    <g transform="translate(200, 120)">
+      <!-- body -->
+      <rect x="-8" y="-5" width="16" height="10" fill="#a0a0c0" rx="2"/>
+      <!-- solar panels -->
+      <rect x="-22" y="-3" width="12" height="6" fill="#1565c0" stroke="#00f3ff" stroke-width="0.5"/>
+      <rect x="10"  y="-3" width="12" height="6" fill="#1565c0" stroke="#00f3ff" stroke-width="0.5"/>
+      <!-- antenna -->
+      <line x1="0" y1="-5" x2="0" y2="-12" stroke="#fff" stroke-width="1"/>
+      <circle cx="0" cy="-13" r="2" fill="#00f3ff" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+</svg>

@@ -1,44 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="900" height="140">
   <defs>
     <filter id="glow">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="wave-grad-1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#0d0f14" stop-opacity="0"/>
+    <filter id="glow-sm">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a0c12" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="wave-grad-2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#0d0f14" stop-opacity="0"/>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0c12" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <rect width="900" height="120" fill="#0d0f14"/>
+  <rect width="900" height="140" fill="#0a0c12"/>
 
   <!-- Stars -->
-  <g opacity="0.7">
-    <circle cx="50" cy="20" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.3s" repeatCount="indefinite"/></circle>
-    <circle cx="150" cy="10" r="1" fill="#00f3ff"><animate attributeName="opacity" values="0.7;0.1;0.7" dur="3.1s" repeatCount="indefinite"/></circle>
-    <circle cx="300" cy="15" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.7s" repeatCount="indefinite"/></circle>
-    <circle cx="480" cy="8" r="1" fill="#bb9af7"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.9s" repeatCount="indefinite"/></circle>
-    <circle cx="620" cy="18" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.5s" repeatCount="indefinite"/></circle>
-    <circle cx="780" cy="12" r="1" fill="#00f3ff"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.1s" repeatCount="indefinite"/></circle>
-    <circle cx="860" cy="22" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.8s" repeatCount="indefinite"/></circle>
-  </g>
+  <circle cx="60"  cy="20" r="1.2" fill="#fff"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.3s" repeatCount="indefinite"/></circle>
+  <circle cx="180" cy="12" r="1"   fill="#00f3ff"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.1s" repeatCount="indefinite"/></circle>
+  <circle cx="320" cy="18" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.7s" repeatCount="indefinite"/></circle>
+  <circle cx="500" cy="8"  r="1"   fill="#bb9af7"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="680" cy="22" r="1.2" fill="#fff"><animate attributeName="opacity" values="0.7;0.9;0.7" dur="3.4s" repeatCount="indefinite"/></circle>
+  <circle cx="820" cy="14" r="1.5" fill="#00f3ff"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="870" cy="30" r="1"   fill="#fff"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.0s" repeatCount="indefinite"/></circle>
 
-  <!-- Wave 1 (back) -->
-  <path d="M0,70 C150,40 300,90 450,60 C600,30 750,80 900,55 L900,120 L0,120 Z" fill="url(#wave-grad-2)" opacity="0.5" filter="url(#glow)">
-    <animateTransform attributeName="transform" type="translate" values="0,0;-60,0;0,0" dur="7s" repeatCount="indefinite"/>
+  <!-- Wave 2 (back) -->
+  <path d="M-100,95 C100,60 250,115 450,80 C650,45 800,100 1000,70 L1000,140 L-100,140 Z"
+        fill="url(#wave2)" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0;80,0;0,0" dur="8s" repeatCount="indefinite"/>
   </path>
 
-  <!-- Wave 2 (front) -->
-  <path d="M0,85 C120,60 280,100 450,75 C620,50 760,90 900,70 L900,120 L0,120 Z" fill="url(#wave-grad-1)" filter="url(#glow)">
-    <animateTransform attributeName="transform" type="translate" values="0,0;50,0;0,0" dur="5s" repeatCount="indefinite"/>
+  <!-- Wave 1 (front) -->
+  <path d="M-100,105 C80,75 250,120 450,90 C650,60 800,110 1000,80 L1000,140 L-100,140 Z"
+        fill="url(#wave1)" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-60,0;0,0" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Crest glow line -->
+  <path d="M-100,105 C80,75 250,120 450,90 C650,60 800,110 1000,80"
+        fill="none" stroke="#00f3ff" stroke-width="2" filter="url(#glow)" opacity="0.9">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-60,0;0,0" dur="5s" repeatCount="indefinite"/>
   </path>
 
-  <!-- Glow line on top of wave -->
-  <path d="M0,85 C120,60 280,100 450,75 C620,50 760,90 900,70" fill="none" stroke="#00f3ff" stroke-width="2" filter="url(#glow)" opacity="0.8">
-    <animateTransform attributeName="transform" type="translate" values="0,0;50,0;0,0" dur="5s" repeatCount="indefinite"/>
-  </path>
+  <!-- Credit text -->
+  <text x="450" y="64" font-family="'Courier New', monospace" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Made with ❤️ by Kaarthic Raja</text>
+  <text x="450" y="84" font-family="'Courier New', monospace" font-size="11" fill="#00f3ff" text-anchor="middle" filter="url(#glow-sm)">KAARTHIC OS v3.2 · Cloud · DevOps · Flutter · AI</text>
 </svg>

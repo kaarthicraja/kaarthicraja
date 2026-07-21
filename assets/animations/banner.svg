@@ -1,100 +1,125 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="900" height="350">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
-      .mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
-    </style>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glow-soft">
-      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <!-- Scanline pattern -->
-    <pattern id="scanlines" width="1" height="4" patternUnits="userSpaceOnUse">
-      <rect width="1" height="2" fill="rgba(0,243,255,0.03)"/>
-    </pattern>
     <!-- Grid pattern -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f3ff" stroke-width="0.3" opacity="0.15"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f3ff" stroke-width="0.3" opacity="0.12"/>
     </pattern>
+    <!-- Scanlines -->
+    <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#000" opacity="0.08"/>
+    </pattern>
+    <!-- Subtle border glow only -->
+    <filter id="border-glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Very subtle text glow — crisp -->
+    <filter id="text-glow" x="-2%" y="-10%" width="104%" height="120%">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
 
-  <!-- BG -->
-  <rect width="900" height="280" fill="#0d0f14"/>
-  <rect width="900" height="280" fill="url(#grid)"/>
-  <rect width="900" height="280" fill="url(#scanlines)"/>
+  <!-- Background -->
+  <rect width="900" height="350" fill="#0a0c12"/>
+  <rect width="900" height="350" fill="url(#grid)"/>
+  <rect width="900" height="350" fill="url(#scan)"/>
 
-  <!-- Aurora blobs -->
-  <ellipse cx="180" cy="80" rx="200" ry="80" fill="#00f3ff" opacity="0.04">
-    <animate attributeName="opacity" values="0.04;0.09;0.04" dur="6s" repeatCount="indefinite"/>
+  <!-- Aurora blobs — very subtle -->
+  <ellipse cx="200" cy="100" rx="280" ry="100" fill="#00f3ff" opacity="0.025">
+    <animate attributeName="opacity" values="0.025;0.05;0.025" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="200;230;200" dur="10s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="720" cy="200" rx="220" ry="90" fill="#bb9af7" opacity="0.04">
-    <animate attributeName="opacity" values="0.04;0.08;0.04" dur="8s" repeatCount="indefinite"/>
+  <ellipse cx="700" cy="250" rx="300" ry="120" fill="#bb9af7" opacity="0.025">
+    <animate attributeName="opacity" values="0.025;0.045;0.025" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="700;670;700" dur="12s" repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- Terminal border box -->
-  <rect x="30" y="20" width="840" height="240" rx="10" fill="none" stroke="#00f3ff" stroke-width="1.5" opacity="0.6" filter="url(#glow-soft)"/>
+  <!-- Outer border -->
+  <rect x="20" y="18" width="860" height="314" rx="10" fill="none"
+        stroke="#00f3ff" stroke-width="1.5" opacity="0.5" filter="url(#border-glow)"/>
 
   <!-- Corner accents -->
-  <line x1="30" y1="20" x2="80" y2="20" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="30" y1="20" x2="30" y2="70" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="870" y1="20" x2="820" y2="20" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="870" y1="20" x2="870" y2="70" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="30" y1="260" x2="80" y2="260" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="30" y1="260" x2="30" y2="210" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="870" y1="260" x2="820" y2="260" stroke="#00f3ff" stroke-width="2"/>
-  <line x1="870" y1="260" x2="870" y2="210" stroke="#00f3ff" stroke-width="2"/>
+  <polyline points="20,50 20,18 65,18" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
+  <polyline points="880,50 880,18 835,18" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
+  <polyline points="20,300 20,332 65,332" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
+  <polyline points="880,300 880,332 835,332" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
 
-  <!-- Header label -->
-  <rect x="370" y="14" width="160" height="14" fill="#0d0f14"/>
-  <text x="450" y="24" class="mono" font-size="11" fill="#00f3ff" text-anchor="middle" filter="url(#glow-soft)">[ DeveloperOS v3.2 ]</text>
+  <!-- Top title strip -->
+  <rect x="360" y="12" width="180" height="14" fill="#0a0c12"/>
+  <text x="450" y="22" font-family="'Courier New', monospace" font-size="11"
+        fill="#00f3ff" text-anchor="middle" filter="url(#text-glow)">[ KAARTHIC OS ]</text>
 
-  <!-- Status dot -->
-  <circle cx="760" cy="42" r="5" fill="#00ff9f">
-    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  <!-- Status indicator — top right -->
+  <circle cx="830" cy="42" r="5" fill="#00ff9f">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="775" y="47" class="mono" font-size="12" fill="#00ff9f">ONLINE</text>
+  <text x="844" y="47" font-family="'Courier New', monospace" font-size="12" fill="#00ff9f">ONLINE</text>
 
-  <!-- System info lines -->
-  <text x="60" y="58" class="mono" font-size="13" fill="#4a5568">┌─────────────────────────────────────────────────────────────────────────────────────────┐</text>
-  <text x="60" y="78" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="78" class="mono" font-size="13" fill="#718096">User ............</text>
-  <text x="230" y="78" class="mono" font-size="13" fill="#00f3ff" filter="url(#glow-soft)">Kaarthic Raja</text>
-  <text x="60" y="98" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="98" class="mono" font-size="13" fill="#718096">Location ........</text>
-  <text x="230" y="98" class="mono" font-size="13" fill="#00f3ff">India 🇮🇳</text>
-  <text x="60" y="118" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="118" class="mono" font-size="13" fill="#718096">Stack ...........</text>
-  <text x="230" y="118" class="mono" font-size="13" fill="#bb9af7">Cloud | DevOps | Flutter | AI</text>
+  <!-- ── Left column: System info ── -->
+  <!-- Box outline -->
+  <rect x="40" y="55" width="340" height="240" rx="6" fill="#0d1017" stroke="#1e2535" stroke-width="1"/>
+  <rect x="40" y="55" width="340" height="22" rx="6" fill="#111520"/>
+  <text x="50" y="70" font-family="'Courier New', monospace" font-size="11" fill="#4a5568">// system.info</text>
+
+  <!-- Info rows — CRISP TEXT, no heavy filter -->
+  <text x="55" y="102" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Kernel .........</text>
+  <text x="195" y="102" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Linux 6.5</text>
+
+  <text x="55" y="128" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Runtime ........</text>
+  <text x="195" y="128" font-family="'Courier New', monospace" font-size="13" fill="#00f3ff">Docker</text>
+
+  <text x="55" y="154" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Cloud ..........</text>
+  <text x="195" y="154" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">AWS | Azure</text>
+
+  <text x="55" y="180" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">IaC ............</text>
+  <text x="195" y="180" font-family="'Courier New', monospace" font-size="13" fill="#bb9af7">Terraform</text>
+
+  <text x="55" y="206" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Container Orch .</text>
+  <text x="195" y="206" font-family="'Courier New', monospace" font-size="13" fill="#00f3ff">Kubernetes</text>
+
+  <text x="55" y="232" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Mobile .........</text>
+  <text x="195" y="232" font-family="'Courier New', monospace" font-size="13" fill="#54C5F8">Flutter</text>
+
+  <text x="55" y="258" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Location .......</text>
+  <text x="195" y="258" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">India 🇮🇳</text>
 
   <!-- Divider -->
-  <text x="60" y="136" class="mono" font-size="13" fill="#4a5568">├─────────────────────────────────────────────────────────────────────────────────────────┤</text>
+  <line x1="40" y1="274" x2="380" y2="274" stroke="#1e2535" stroke-width="1"/>
+  <text x="55" y="290" font-family="'Courier New', monospace" font-size="12" fill="#4a5568">uptime: 365d 0h | build: v3.2</text>
 
-  <!-- whoami section -->
-  <text x="60" y="156" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="156" class="mono" font-size="13" fill="#7ec8e3">$ whoami</text>
+  <!-- ── Right column: whoami ── -->
+  <rect x="400" y="55" width="480" height="240" rx="6" fill="#0d1017" stroke="#1e2535" stroke-width="1"/>
+  <rect x="400" y="55" width="480" height="22" rx="6" fill="#111520"/>
+  <text x="410" y="70" font-family="'Courier New', monospace" font-size="11" fill="#4a5568">// terminal.session</text>
 
-  <!-- Role 1 -->
-  <text x="60" y="176" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="176" class="mono" font-size="13" fill="#00ff9f">▶</text>
-  <text x="96" y="176" class="mono" font-size="13" fill="#e2e8f0">Automation Builder</text>
-  <text x="60" y="196" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="196" class="mono" font-size="13" fill="#00ff9f">▶</text>
-  <text x="96" y="196" class="mono" font-size="13" fill="#e2e8f0">Linux Enthusiast</text>
-  <text x="60" y="216" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="216" class="mono" font-size="13" fill="#00ff9f">▶</text>
-  <text x="96" y="216" class="mono" font-size="13" fill="#e2e8f0">Flutter Developer</text>
-  <text x="60" y="236" class="mono" font-size="13" fill="#4a5568">│</text>
-  <text x="80" y="236" class="mono" font-size="13" fill="#00ff9f">▶</text>
-  <text x="96" y="236" class="mono" font-size="13" fill="#e2e8f0">Open Source Learner</text>
+  <!-- $ whoami command -->
+  <text x="418" y="105" font-family="'Courier New', monospace" font-size="14" fill="#7ec8e3">$</text>
+  <text x="433" y="105" font-family="'Courier New', monospace" font-size="14" fill="#a9b1d6">whoami</text>
 
-  <!-- Blinking cursor at end -->
-  <rect x="255" y="223" width="9" height="15" fill="#00f3ff">
+  <!-- Roles — crisp, clean, subtle filter only -->
+  <text x="418" y="130" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="130" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Automation Builder</text>
+
+  <text x="418" y="152" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="152" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Cloud Engineer</text>
+
+  <text x="418" y="174" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="174" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Flutter Developer</text>
+
+  <text x="418" y="196" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="196" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Open Source Learner</text>
+
+  <!-- Mission statement line -->
+  <line x1="400" y1="218" x2="880" y2="218" stroke="#1e2535" stroke-width="1"/>
+  <text x="418" y="240" font-family="'Courier New', monospace" font-size="13" fill="#7ec8e3">$</text>
+  <text x="433" y="240" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">cat mission.txt</text>
+
+  <text x="418" y="262" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7">"Building intelligent automation systems</text>
+  <text x="418" y="278" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7"> that make developers more powerful."</text>
+
+  <!-- Blinking cursor -->
+  <rect x="418" y="292" width="9" height="14" fill="#00f3ff">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
-
-  <text x="60" y="258" class="mono" font-size="13" fill="#4a5568">└─────────────────────────────────────────────────────────────────────────────────────────┘</text>
 </svg>
