@@ -28,21 +28,39 @@
 
     <style>
       .name {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        font-size: 55px;
+        font-family: 'Segoe UI', Inter, sans-serif;
+        font-size: 38px;
         font-weight: 900;
         fill: #ffffff;
-        text-shadow: 0 0 5px #00f3ff, 0 0 15px #00f3ff, 0 0 30px #00f3ff, 0 0 50px #bc13fe;
-        letter-spacing: 4px;
+        stroke: #00f3ff;
+        stroke-width: 0.5px;
+        letter-spacing: 5px;
       }
-      .subtitle {
-        font-family: 'Courier New', monospace;
-        font-size: 20px;
-        fill: #00f3ff;
-        text-shadow: 0 0 5px #00f3ff;
+      .os-box {
+        font-family: 'Courier New', Consolas, monospace;
+        font-size: 16px;
+      }
+      .os-box-border {
+        fill: none;
+        stroke: #bc13fe;
+        stroke-width: 1.5;
+        stroke-opacity: 0.8;
+        rx: 6px;
+      }
+      .os-box-title {
+        fill: #a9b1d6;
+        font-family: 'Courier New', Consolas, monospace;
+        font-size: 14px;
         font-weight: bold;
       }
-      .bracket {
+      .os-box-key {
+        fill: #a9b1d6;
+      }
+      .os-box-val {
+        fill: #00f3ff;
+        font-weight: bold;
+      }
+      .os-box-val-magenta {
         fill: #bc13fe;
         font-weight: bold;
       }
@@ -130,26 +148,52 @@
     </circle>
   </g>
 
-  <!-- Typography -->
-  <g text-anchor="middle" transform="translate(500, 140)">
-    <!-- Main Name with slight glowing animation -->
-    <text class="name" x="0" y="0">
+  <!-- Typography (OS Metadata Style) -->
+  <g transform="translate(250, 20)">
+    <!-- OS Box Border -->
+    <rect class="os-box-border" x="0" y="0" width="500" height="260" />
+    
+    <!-- Non-blurred Shadow for Name -->
+    <text class="name" x="253" y="63" text-anchor="middle" fill="#00f3ff" stroke="none" opacity="0.15">
       KAARTHIC RAJA
-      <animate attributeName="opacity" values="0.8; 1; 0.8" dur="4s" repeatCount="indefinite" />
     </text>
-  </g>
+    <!-- Main Name -->
+    <text class="name" x="250" y="60" text-anchor="middle">
+      KAARTHIC RAJA
+      <animate attributeName="opacity" values="0.85; 1; 0.85" dur="4s" repeatCount="indefinite" />
+    </text>
 
-  <!-- Animated Typing Subtitle -->
-  <g transform="translate(100, 200)">
-    <g clip-path="url(#text-clip)">
-      <text class="subtitle" x="0" y="0">
-        <tspan class="bracket">[ </tspan>Cloud Engineer • DevOps • Flutter Developer • AI Automation<tspan class="bracket"> ]</tspan>
+    <!-- Subtitle -->
+    <text class="os-box-title" x="40" y="115">DeveloperOS Kernel v3.2</text>
+    
+    <!-- Divider -->
+    <line x1="40" y1="130" x2="460" y2="130" stroke="#bc13fe" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 4" />
+
+    <!-- OS Stats Grid -->
+    <g class="os-box" transform="translate(40, 165)">
+      <text x="0" y="0">
+        <tspan class="os-box-key">Kernel........</tspan> <tspan class="os-box-val">Linux</tspan>
+      </text>
+      <text x="0" y="30">
+        <tspan class="os-box-key">Runtime.......</tspan> <tspan class="os-box-val">Docker</tspan>
+      </text>
+      <text x="0" y="60">
+        <tspan class="os-box-key">Cloud.........</tspan> <tspan class="os-box-val">AWS | Azure</tspan>
       </text>
     </g>
-    <!-- Typing Cursor -->
-    <rect class="cursor" x="0" y="-18" width="12" height="24">
-      <animate attributeName="x" values="0; 800; 800; 0" keyTimes="0; 0.4; 0.9; 1" dur="12s" repeatCount="indefinite" />
-    </rect>
+
+    <g class="os-box" transform="translate(260, 165)">
+      <text x="0" y="0">
+        <tspan class="os-box-key">AI Core.......</tspan> <tspan class="os-box-val-magenta">Active</tspan>
+      </text>
+      <text x="0" y="30">
+        <tspan class="os-box-key">Status........</tspan> <tspan class="os-box-val" fill="#10B981">ONLINE </tspan>
+      </text>
+      <!-- Blinking Status Dot -->
+      <circle cx="160" cy="25" r="5" fill="#10B981">
+        <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+    </g>
   </g>
 
 </svg>
