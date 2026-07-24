@@ -12,7 +12,7 @@
   <!-- Frosted panel -->
   <rect x="2" y="2" width="746" height="106" fill="#ffffff" fill-opacity="0.03" rx="9"/>
   <!-- Neon border -->
-  <rect x="1" y="1" width="748" height="108" fill="none" stroke="#00f3ff" stroke-width="1.5" rx="10"
+  <rect x="1" y="1" width="748" height="108" fill="none" stroke="#34d399" stroke-width="1.5" rx="10"
         stroke-dasharray="12,6" filter="url(#glow-sm)">
     <animate attributeName="stroke-dashoffset" values="0;36;0" dur="4s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
@@ -22,20 +22,20 @@
   <rect x="0" y="15" width="4" height="80" fill="#bc13fe" rx="2"/>
 
   <!-- Terminal-style header -->
-  <text x="16" y="26" font-family="'Courier New', monospace" font-size="11" fill="#4a5568">kaarthic@os:~$ cat wisdom.txt</text>
+  <text x="16" y="26" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#4a524a">kaarthic@os:~$ cat wisdom.txt</text>
 
   <!-- Decorative opening quote -->
-  <text x="22" y="78" font-family="Georgia, serif" font-size="60" fill="#00f3ff" opacity="0.08">"</text>
+  <text x="22" y="78" font-family="Georgia, serif" font-size="60" fill="#34d399" opacity="0.08">"</text>
 
   <!-- Quote text — crisp, no filter -->
-  <text x="50" y="62" font-family="'Courier New', monospace" font-size="15" fill="#00f3ff" font-weight="bold" id="qt1">Talk is cheap. Show me the code.</text>
-  <text x="50" y="80" font-family="'Courier New', monospace" font-size="13" fill="#4a6080" font-style="italic">— auto-updated by GitHub Actions every 24h</text>
+  <text x="50" y="62" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" fill="#34d399" font-weight="bold" id="qt1">Talk is cheap. Show me the code.</text>
+  <text x="50" y="80" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080" font-style="italic">— auto-updated by GitHub Actions every 24h</text>
 
   <!-- Author placeholder  -->
-  <text x="710" y="98" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7" text-anchor="end">~ Linus Torvalds</text>
+  <text x="710" y="98" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#6ee7b7" text-anchor="end">~ Linus Torvalds</text>
 
   <!-- Animated cursor at end of quote line -->
-  <rect x="680" y="50" width="8" height="14" fill="#00f3ff">
+  <rect x="680" y="50" width="8" height="14" fill="#34d399">
     <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
   </rect>
 </svg>

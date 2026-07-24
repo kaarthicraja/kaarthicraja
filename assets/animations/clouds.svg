@@ -30,7 +30,7 @@
     <ellipse cx="258" cy="58" rx="72" ry="30" fill="#0d1a2e"/>
     <ellipse cx="145" cy="64" rx="60" ry="22" fill="#0d1a2e"/>
     <!-- Subtle neon edge -->
-    <ellipse cx="258" cy="58" rx="72" ry="30" fill="none" stroke="#00f3ff" stroke-width="0.5" opacity="0.3"/>
+    <ellipse cx="258" cy="58" rx="72" ry="30" fill="none" stroke="#34d399" stroke-width="0.5" opacity="0.3"/>
   </g>
 
   <!-- Cloud 4 (front, faster) -->

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="900" height="140">
   <defs>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="glow-sm">
@@ -9,24 +9,24 @@
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <linearGradient id="wave1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0a0c12" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#111211" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="wave2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#0a0c12" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#6ee7b7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#111211" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <rect width="900" height="140" fill="#0a0c12"/>
+  <rect width="900" height="140" fill="#111211"/>
 
   <!-- Stars -->
   <circle cx="60"  cy="20" r="1.2" fill="#fff"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.3s" repeatCount="indefinite"/></circle>
-  <circle cx="180" cy="12" r="1"   fill="#00f3ff"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.1s" repeatCount="indefinite"/></circle>
+  <circle cx="180" cy="12" r="1"   fill="#34d399"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.1s" repeatCount="indefinite"/></circle>
   <circle cx="320" cy="18" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.7s" repeatCount="indefinite"/></circle>
-  <circle cx="500" cy="8"  r="1"   fill="#bb9af7"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="500" cy="8"  r="1"   fill="#6ee7b7"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite"/></circle>
   <circle cx="680" cy="22" r="1.2" fill="#fff"><animate attributeName="opacity" values="0.7;0.9;0.7" dur="3.4s" repeatCount="indefinite"/></circle>
-  <circle cx="820" cy="14" r="1.5" fill="#00f3ff"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="820" cy="14" r="1.5" fill="#34d399"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/></circle>
   <circle cx="870" cy="30" r="1"   fill="#fff"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.0s" repeatCount="indefinite"/></circle>
 
   <!-- Wave 2 (back) -->
@@ -42,11 +42,11 @@
   </path>
   <!-- Crest glow line -->
   <path d="M-100,105 C80,75 250,120 450,90 C650,60 800,110 1000,80"
-        fill="none" stroke="#00f3ff" stroke-width="2" filter="url(#glow)" opacity="0.9">
+        fill="none" stroke="#34d399" stroke-width="2" filter="url(#glow)" opacity="0.9">
     <animateTransform attributeName="transform" type="translate" values="0,0;-60,0;0,0" dur="5s" repeatCount="indefinite"/>
   </path>
 
   <!-- Credit text -->
-  <text x="450" y="64" font-family="'Courier New', monospace" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Made with ❤️ by Kaarthic Raja</text>
-  <text x="450" y="84" font-family="'Courier New', monospace" font-size="11" fill="#00f3ff" text-anchor="middle" filter="url(#glow-sm)">KAARTHIC OS v3.2 · Cloud · DevOps · Flutter · AI</text>
+  <text x="450" y="64" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Made with ❤️ by Kaarthic Raja</text>
+  <text x="450" y="84" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#34d399" text-anchor="middle" filter="url(#glow-sm)">Cloud · DevOps · Flutter · AI</text>
 </svg>

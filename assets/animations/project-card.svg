@@ -1,48 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130" width="420" height="130">
   <defs>
-    <style>.mono { font-family: 'Courier New', monospace; }</style>
+    <style>.mono { font-family: 'JetBrains Mono','JetBrains Mono',monospace; }</style>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1b26"/>
-      <stop offset="100%" stop-color="#0d0f14"/>
+      <stop offset="0%" stop-color="#1f211f"/>
+      <stop offset="100%" stop-color="#111211"/>
     </linearGradient>
   </defs>
 
   <rect width="420" height="130" fill="url(#card-bg)" rx="12"/>
   <!-- Neon border with glow -->
-  <rect x="1" y="1" width="418" height="128" fill="none" stroke="#00f3ff" stroke-width="1.5" rx="12" filter="url(#glow)" opacity="0.7">
+  <rect x="1" y="1" width="418" height="128" fill="none" stroke="#34d399" stroke-width="1.5" rx="12" filter="url(#glow)" opacity="0.7">
     <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
   </rect>
   <!-- Top accent bar -->
-  <rect x="0" y="0" width="420" height="4" fill="#00f3ff" rx="12" opacity="0.8"/>
+  <rect x="0" y="0" width="420" height="4" fill="#34d399" rx="12" opacity="0.8"/>
 
   <!-- Status badge -->
-  <rect x="330" y="15" width="75" height="20" fill="#00ff9f" rx="10" opacity="0.15"/>
-  <circle cx="342" cy="25" r="4" fill="#00ff9f">
+  <rect x="330" y="15" width="75" height="20" fill="#a7f3d0" rx="10" opacity="0.15"/>
+  <circle cx="342" cy="25" r="4" fill="#a7f3d0">
     <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
   </circle>
-  <text x="352" y="29" class="mono" font-size="10" fill="#00ff9f">ACTIVE</text>
+  <text x="352" y="29" class="mono" font-size="10" fill="#a7f3d0">ACTIVE</text>
 
   <!-- Project title -->
-  <text x="20" y="40" class="mono" font-size="16" fill="#00f3ff" font-weight="bold">DeveloperOS Platform</text>
+  <text x="20" y="40" class="mono" font-size="16" fill="#34d399" font-weight="bold">Cloud Automation Suite</text>
 
   <!-- Description -->
-  <text x="20" y="62" class="mono" font-size="11" fill="#718096">AI-powered developer operating system with</text>
-  <text x="20" y="76" class="mono" font-size="11" fill="#718096">modular CLI tools and automation pipelines.</text>
+  <text x="20" y="62" class="mono" font-size="11" fill="#6b736b">Cloud infrastructure automation with</text>
+  <text x="20" y="76" class="mono" font-size="11" fill="#6b736b">Terraform modules and CI/CD pipelines.</text>
 
   <!-- Tags -->
-  <rect x="20" y="90" width="55" height="18" fill="#1a1b26" rx="9" stroke="#00f3ff" stroke-width="1" opacity="0.6"/>
-  <text x="48" y="103" class="mono" font-size="10" fill="#00f3ff" text-anchor="middle">Python</text>
+  <rect x="20" y="90" width="55" height="18" fill="#1f211f" rx="9" stroke="#34d399" stroke-width="1" opacity="0.6"/>
+  <text x="48" y="103" class="mono" font-size="10" fill="#34d399" text-anchor="middle">Python</text>
 
-  <rect x="82" y="90" width="42" height="18" fill="#1a1b26" rx="9" stroke="#bb9af7" stroke-width="1" opacity="0.6"/>
-  <text x="103" y="103" class="mono" font-size="10" fill="#bb9af7" text-anchor="middle">AI</text>
+  <rect x="82" y="90" width="42" height="18" fill="#1f211f" rx="9" stroke="#6ee7b7" stroke-width="1" opacity="0.6"/>
+  <text x="103" y="103" class="mono" font-size="10" fill="#6ee7b7" text-anchor="middle">AI</text>
 
-  <rect x="132" y="90" width="55" height="18" fill="#1a1b26" rx="9" stroke="#00ff9f" stroke-width="1" opacity="0.6"/>
-  <text x="159" y="103" class="mono" font-size="10" fill="#00ff9f" text-anchor="middle">CLI</text>
+  <rect x="132" y="90" width="55" height="18" fill="#1f211f" rx="9" stroke="#a7f3d0" stroke-width="1" opacity="0.6"/>
+  <text x="159" y="103" class="mono" font-size="10" fill="#a7f3d0" text-anchor="middle">CLI</text>
 
   <!-- Stars count -->
-  <text x="350" y="103" class="mono" font-size="12" fill="#f7a928">★ 42</text>
+  <text x="350" y="103" class="mono" font-size="12" fill="#d97706">★ 42</text>
 </svg>

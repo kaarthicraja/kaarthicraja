@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" width="200" height="280">
   <defs>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <radialGradient id="flame" cx="50%" cy="100%" r="50%">
-      <stop offset="0%" stop-color="#f7a928"/>
+      <stop offset="0%" stop-color="#d97706"/>
       <stop offset="60%" stop-color="#ff4400"/>
       <stop offset="100%" stop-color="transparent"/>
     </radialGradient>
   </defs>
-  <rect width="200" height="280" fill="#0d0f14"/>
+  <rect width="200" height="280" fill="#111211"/>
 
   <!-- Flame / exhaust -->
   <ellipse cx="100" cy="240" rx="18" ry="28" fill="url(#flame)" opacity="0.9" filter="url(#glow)">
@@ -27,20 +27,20 @@
     <!-- Body -->
     <rect x="83" y="130" width="34" height="90" fill="#e2e8f0" rx="5"/>
     <!-- Nose cone -->
-    <path d="M 83,130 Q 100,70 117,130 Z" fill="#00f3ff"/>
+    <path d="M 83,130 Q 100,70 117,130 Z" fill="#34d399"/>
     <!-- Window -->
-    <circle cx="100" cy="155" r="10" fill="#0d0f14" stroke="#00f3ff" stroke-width="2"/>
-    <circle cx="100" cy="155" r="5" fill="#00f3ff" opacity="0.6">
+    <circle cx="100" cy="155" r="10" fill="#111211" stroke="#34d399" stroke-width="2"/>
+    <circle cx="100" cy="155" r="5" fill="#34d399" opacity="0.6">
       <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
     </circle>
     <!-- Left fin -->
-    <path d="M 83,190 L 63,220 L 83,215 Z" fill="#bb9af7"/>
+    <path d="M 83,190 L 63,220 L 83,215 Z" fill="#d97706"/>
     <!-- Right fin -->
-    <path d="M 117,190 L 137,220 L 117,215 Z" fill="#bb9af7"/>
+    <path d="M 117,190 L 137,220 L 117,215 Z" fill="#d97706"/>
   </g>
 
   <!-- Particles -->
-  <circle cx="85" cy="248" r="3" fill="#f7a928" opacity="0.7">
+  <circle cx="85" cy="248" r="3" fill="#d97706" opacity="0.7">
     <animate attributeName="cy" values="248;270;280" dur="0.6s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.7;0.3;0" dur="0.6s" repeatCount="indefinite"/>
     <animate attributeName="cx" values="85;78;72" dur="0.6s" repeatCount="indefinite"/>

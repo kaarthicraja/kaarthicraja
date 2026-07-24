@@ -2,7 +2,7 @@
   <defs>
     <!-- Grid pattern -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f3ff" stroke-width="0.3" opacity="0.12"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#34d399" stroke-width="0.3" opacity="0.12"/>
     </pattern>
     <!-- Scanlines -->
     <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
@@ -21,105 +21,105 @@
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="350" fill="#0a0c12"/>
+  <rect width="900" height="350" fill="#111211"/>
   <rect width="900" height="350" fill="url(#grid)"/>
   <rect width="900" height="350" fill="url(#scan)"/>
 
   <!-- Aurora blobs — very subtle -->
-  <ellipse cx="200" cy="100" rx="280" ry="100" fill="#00f3ff" opacity="0.025">
+  <ellipse cx="200" cy="100" rx="280" ry="100" fill="#34d399" opacity="0.025">
     <animate attributeName="opacity" values="0.025;0.05;0.025" dur="8s" repeatCount="indefinite"/>
     <animate attributeName="cx" values="200;230;200" dur="10s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="700" cy="250" rx="300" ry="120" fill="#bb9af7" opacity="0.025">
+  <ellipse cx="700" cy="250" rx="300" ry="120" fill="#6ee7b7" opacity="0.025">
     <animate attributeName="opacity" values="0.025;0.045;0.025" dur="10s" repeatCount="indefinite"/>
     <animate attributeName="cx" values="700;670;700" dur="12s" repeatCount="indefinite"/>
   </ellipse>
 
   <!-- Outer border -->
   <rect x="20" y="18" width="860" height="314" rx="10" fill="none"
-        stroke="#00f3ff" stroke-width="1.5" opacity="0.5" filter="url(#border-glow)"/>
+        stroke="#34d399" stroke-width="1.5" opacity="0.5" filter="url(#border-glow)"/>
 
   <!-- Corner accents -->
-  <polyline points="20,50 20,18 65,18" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
-  <polyline points="880,50 880,18 835,18" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
-  <polyline points="20,300 20,332 65,332" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
-  <polyline points="880,300 880,332 835,332" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
+  <polyline points="20,50 20,18 65,18" fill="none" stroke="#34d399" stroke-width="2.5"/>
+  <polyline points="880,50 880,18 835,18" fill="none" stroke="#34d399" stroke-width="2.5"/>
+  <polyline points="20,300 20,332 65,332" fill="none" stroke="#34d399" stroke-width="2.5"/>
+  <polyline points="880,300 880,332 835,332" fill="none" stroke="#34d399" stroke-width="2.5"/>
 
   <!-- Top title strip -->
-  <rect x="360" y="12" width="180" height="14" fill="#0a0c12"/>
-  <text x="450" y="22" font-family="'Courier New', monospace" font-size="11"
-        fill="#00f3ff" text-anchor="middle" filter="url(#text-glow)">[ KAARTHIC OS ]</text>
+  <rect x="360" y="12" width="180" height="14" fill="#111211"/>
+  <text x="450" y="22" font-family="'JetBrains Mono','Courier New',monospace" font-size="11"
+        fill="#34d399" text-anchor="middle" filter="url(#text-glow)">[ KAARTHIC RAJA ]</text>
 
   <!-- Status indicator — top right -->
   <circle cx="830" cy="42" r="5" fill="#00ff9f">
     <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="844" y="47" font-family="'Courier New', monospace" font-size="12" fill="#00ff9f">ONLINE</text>
+  <text x="844" y="47" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#00ff9f">ONLINE</text>
 
   <!-- ── Left column: System info ── -->
   <!-- Box outline -->
   <rect x="40" y="55" width="340" height="240" rx="6" fill="#0d1017" stroke="#1e2535" stroke-width="1"/>
   <rect x="40" y="55" width="340" height="22" rx="6" fill="#111520"/>
-  <text x="50" y="70" font-family="'Courier New', monospace" font-size="11" fill="#4a5568">// system.info</text>
+  <text x="50" y="70" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#4a524a">// system.info</text>
 
   <!-- Info rows — CRISP TEXT, no heavy filter -->
-  <text x="55" y="102" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Kernel .........</text>
-  <text x="195" y="102" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Linux 6.5</text>
+  <text x="55" y="102" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">Kernel .........</text>
+  <text x="195" y="102" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">Linux 6.5</text>
 
-  <text x="55" y="128" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Runtime ........</text>
-  <text x="195" y="128" font-family="'Courier New', monospace" font-size="13" fill="#00f3ff">Docker</text>
+  <text x="55" y="128" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">Runtime ........</text>
+  <text x="195" y="128" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#34d399">Docker</text>
 
-  <text x="55" y="154" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Cloud ..........</text>
-  <text x="195" y="154" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">AWS | Azure</text>
+  <text x="55" y="154" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">Cloud ..........</text>
+  <text x="195" y="154" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">AWS | Azure</text>
 
-  <text x="55" y="180" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">IaC ............</text>
-  <text x="195" y="180" font-family="'Courier New', monospace" font-size="13" fill="#bb9af7">Terraform</text>
+  <text x="55" y="180" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">IaC ............</text>
+  <text x="195" y="180" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#6ee7b7">Terraform</text>
 
-  <text x="55" y="206" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Container Orch .</text>
-  <text x="195" y="206" font-family="'Courier New', monospace" font-size="13" fill="#00f3ff">Kubernetes</text>
+  <text x="55" y="206" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">Container Orch .</text>
+  <text x="195" y="206" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#34d399">Kubernetes</text>
 
-  <text x="55" y="232" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Mobile .........</text>
-  <text x="195" y="232" font-family="'Courier New', monospace" font-size="13" fill="#54C5F8">Flutter</text>
+  <text x="55" y="232" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">Mobile .........</text>
+  <text x="195" y="232" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#54C5F8">Flutter</text>
 
-  <text x="55" y="258" font-family="'Courier New', monospace" font-size="13" fill="#4a6080">Location .......</text>
-  <text x="195" y="258" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">India 🇮🇳</text>
+  <text x="55" y="258" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4a6080">Location .......</text>
+  <text x="195" y="258" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">India 🇮🇳</text>
 
   <!-- Divider -->
   <line x1="40" y1="274" x2="380" y2="274" stroke="#1e2535" stroke-width="1"/>
-  <text x="55" y="290" font-family="'Courier New', monospace" font-size="12" fill="#4a5568">uptime: 365d 0h | build: v3.2</text>
+  <text x="55" y="290" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#4a524a">uptime: 365d 0h | build: v3.2</text>
 
   <!-- ── Right column: whoami ── -->
   <rect x="400" y="55" width="480" height="240" rx="6" fill="#0d1017" stroke="#1e2535" stroke-width="1"/>
   <rect x="400" y="55" width="480" height="22" rx="6" fill="#111520"/>
-  <text x="410" y="70" font-family="'Courier New', monospace" font-size="11" fill="#4a5568">// terminal.session</text>
+  <text x="410" y="70" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#4a524a">// terminal.session</text>
 
   <!-- $ whoami command -->
-  <text x="418" y="105" font-family="'Courier New', monospace" font-size="14" fill="#7ec8e3">$</text>
-  <text x="433" y="105" font-family="'Courier New', monospace" font-size="14" fill="#a9b1d6">whoami</text>
+  <text x="418" y="105" font-family="'JetBrains Mono','Courier New',monospace" font-size="14" fill="#7ec8e3">$</text>
+  <text x="433" y="105" font-family="'JetBrains Mono','Courier New',monospace" font-size="14" fill="#d1d5d1">whoami</text>
 
   <!-- Roles — crisp, clean, subtle filter only -->
-  <text x="418" y="130" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
-  <text x="436" y="130" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Automation Builder</text>
+  <text x="418" y="130" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="130" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">Automation Builder</text>
 
-  <text x="418" y="152" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
-  <text x="436" y="152" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Cloud Engineer</text>
+  <text x="418" y="152" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="152" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">Cloud Engineer</text>
 
-  <text x="418" y="174" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
-  <text x="436" y="174" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Flutter Developer</text>
+  <text x="418" y="174" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="174" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">Flutter Developer</text>
 
-  <text x="418" y="196" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">▶</text>
-  <text x="436" y="196" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">Open Source Learner</text>
+  <text x="418" y="196" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#00ff9f">▶</text>
+  <text x="436" y="196" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">Open Source Learner</text>
 
   <!-- Mission statement line -->
   <line x1="400" y1="218" x2="880" y2="218" stroke="#1e2535" stroke-width="1"/>
-  <text x="418" y="240" font-family="'Courier New', monospace" font-size="13" fill="#7ec8e3">$</text>
-  <text x="433" y="240" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">cat mission.txt</text>
+  <text x="418" y="240" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#7ec8e3">$</text>
+  <text x="433" y="240" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#d1d5d1">cat mission.txt</text>
 
-  <text x="418" y="262" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7">"Building intelligent automation systems</text>
-  <text x="418" y="278" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7"> that make developers more powerful."</text>
+  <text x="418" y="262" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#6ee7b7">"Building intelligent automation systems</text>
+  <text x="418" y="278" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#6ee7b7"> that make developers more powerful."</text>
 
   <!-- Blinking cursor -->
-  <rect x="418" y="292" width="9" height="14" fill="#00f3ff">
+  <rect x="418" y="292" width="9" height="14" fill="#34d399">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 </svg>

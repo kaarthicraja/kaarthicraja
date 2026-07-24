@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="assets/animations/hero-background.svg" alt="KAARTHIC OS — Hero" width="100%"/>
+  <img src="assets/animations/hero-background.svg" alt="Hero Background" width="100%"/>
 </div>
 
 <div align="center">
-  <img src="assets/banner.svg" alt="KAARTHIC OS v3.2 — Kaarthic Raja" width="95%"/>
+  <img src="assets/banner.svg" alt="Kaarthic Raja — Cloud Engineer" width="95%"/>
 </div>
 
 <div align="center">
@@ -18,7 +18,7 @@
 
 <img align="right" src="assets/animations/earth.svg" width="150" alt="Rotating Earth — Cloud Engineering"/>
 
-I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselves*. My profile is powered by **KAARTHIC OS** — a personal operating system identity built with modular SVGs and GitHub Actions.
+I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselves*. This profile is an automated, animated GitHub portfolio built with modular SVGs and GitHub Actions.
 
 - ☁️ Cloud architecture on **AWS & Azure**
 - ⚙️ **CI/CD pipelines** — Docker, Kubernetes & Terraform
@@ -26,7 +26,7 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 - 🤖 **AI automation** with Python & LLM pipelines
 - 🐧 Daily-driving **Linux** and living in the terminal
 
-> *"I don't just write code — I build operating systems for my workflow."*
+> *"Automate everything. Ship fast. Stay curious."*
 
 <br clear="right"/>
 
@@ -44,10 +44,10 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 
 ---
 
-## 📡 System Dashboard
+## 📡 Dashboard
 
 <div align="center">
-  <img src="assets/animations/dashboard.svg" alt="KAARTHIC OS Dashboard" width="85%"/>
+  <img src="assets/animations/dashboard.svg" alt="Dashboard" width="85%"/>
 </div>
 
 <div align="center">
@@ -69,7 +69,7 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 <br>
 
 <div align="center">
-  <img src="assets/animations/project-card.svg" width="46%" alt="DeveloperOS Platform"/>
+  <img src="assets/animations/project-card.svg" width="46%" alt="Cloud Automation Suite"/>
   &nbsp;
   <img src="assets/animations/timeline.svg" width="48%" alt="Career Timeline"/>
 </div>
@@ -99,7 +99,7 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=tokyonight&hide_border=true&background=0a0c12&ring=00f3ff&fire=bb9af7&currStreakNum=ffffff&sideNums=a9b1d6&currStreakLabel=00f3ff" height="185" alt="GitHub Streak"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=dark&hide_border=true&background=111211&ring=34d399&fire=d97706&currStreakNum=ffffff&sideNums=d1d5d1&currStreakLabel=34d399" height="185" alt="GitHub Streak"/>
 </div>
 
 ---
@@ -107,7 +107,7 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 ## 📈 Contribution Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaarthicraja&theme=tokyo-night&bg_color=0a0c12&color=00f3ff&line=bb9af7&point=ffffff&hide_border=true&area=true&area_color=00f3ff" width="100%" alt="Activity Graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaarthicraja&theme=tokyo-night&bg_color=111211&color=34d399&line=6ee7b7&point=ffffff&hide_border=true&area=true&area_color=34d399" width="100%" alt="Activity Graph"/>
 </div>
 
 ---
@@ -140,11 +140,11 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=kaarthicraja&color=00f3ff&style=for-the-badge&label=PROFILE+VIEWS)
+![Profile Views](https://komarev.com/ghpvc/?username=kaarthicraja&color=34d399&style=for-the-badge&label=PROFILE+VIEWS)
 &nbsp;
-![Followers](https://img.shields.io/github/followers/kaarthicraja?color=bb9af7&style=for-the-badge&label=FOLLOWERS&logo=github)
+![Followers](https://img.shields.io/github/followers/kaarthicraja?color=6ee7b7&style=for-the-badge&label=FOLLOWERS&logo=github)
 &nbsp;
-![Stars](https://img.shields.io/github/stars/kaarthicraja?color=f7a928&style=for-the-badge&label=TOTAL+STARS&logo=github)
+![Stars](https://img.shields.io/github/stars/kaarthicraja?color=d97706&style=for-the-badge&label=TOTAL+STARS&logo=github)
 
 </div>
 
@@ -170,5 +170,5 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 ---
 
 <div align="center">
-  <img src="assets/animations/footer-wave.svg" alt="KAARTHIC OS Footer" width="100%"/>
+  <img src="assets/animations/footer-wave.svg" alt="Footer" width="100%"/>
 </div>

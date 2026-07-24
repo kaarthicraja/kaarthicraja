@@ -1,29 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background — warm charcoal, no aurora blobs -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#040b16" />
-      <stop offset="50%" stop-color="#081836" />
-      <stop offset="100%" stop-color="#02050b" />
+      <stop offset="0%"   stop-color="#0d1210" />
+      <stop offset="50%"  stop-color="#0f1a14" />
+      <stop offset="100%" stop-color="#080e09" />
     </linearGradient>
-
-    <!-- Aurora Gradients -->
-    <radialGradient id="aurora1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="aurora2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#bc13fe" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#bc13fe" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="aurora3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0066ff" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#0066ff" stop-opacity="0" />
-    </radialGradient>
 
     <!-- Grid Pattern -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f3ff" stroke-width="1" stroke-opacity="0.1"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#34d399" stroke-width="1" stroke-opacity="0.08"/>
     </pattern>
 
     <style>
@@ -32,167 +18,132 @@
         font-size: 38px;
         font-weight: 900;
         fill: #ffffff;
-        stroke: #00f3ff;
-        stroke-width: 0.5px;
         letter-spacing: 5px;
       }
       .os-box {
-        font-family: 'Courier New', Consolas, monospace;
-        font-size: 16px;
+        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+        font-size: 14px;
       }
       .os-box-border {
         fill: none;
-        stroke: #bc13fe;
-        stroke-width: 1.5;
-        stroke-opacity: 0.8;
-        rx: 6px;
+        stroke: #34d399;
+        stroke-width: 1px;
+        stroke-opacity: 0.5;
       }
       .os-box-title {
-        fill: #a9b1d6;
-        font-family: 'Courier New', Consolas, monospace;
-        font-size: 14px;
+        fill: #6b736b;
+        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+        font-size: 12px;
         font-weight: bold;
+        letter-spacing: 2px;
       }
-      .os-box-key {
-        fill: #a9b1d6;
-      }
-      .os-box-val {
-        fill: #00f3ff;
-        font-weight: bold;
-      }
-      .os-box-val-magenta {
-        fill: #bc13fe;
-        font-weight: bold;
-      }
-      
+      .os-box-key  { fill: #4a524a; }
+      .os-box-val  { fill: #34d399; font-weight: bold; }
+      .os-box-val-warm { fill: #d97706; font-weight: bold; }
       @keyframes blink {
         0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
+        50%       { opacity: 0; }
       }
       .cursor {
-        fill: #bc13fe;
+        fill: #34d399;
         animation: blink 0.8s step-end infinite;
       }
     </style>
-
-    <clipPath id="text-clip">
-      <rect x="0" y="-25" width="0" height="40">
-        <animate attributeName="width" values="0; 800; 800; 0" keyTimes="0; 0.4; 0.9; 1" dur="12s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
   </defs>
 
   <!-- Background -->
   <rect width="100%" height="100%" fill="url(#bg)" />
 
-  <!-- Aurora Elements -->
-  <circle cx="200" cy="150" r="350" fill="url(#aurora1)">
-    <animate attributeName="cx" values="100;400;100" dur="20s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="50;250;50" dur="25s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="800" cy="150" r="400" fill="url(#aurora2)">
-    <animate attributeName="cx" values="900;500;900" dur="22s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="250;50;250" dur="18s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="500" cy="50" r="300" fill="url(#aurora3)">
-    <animate attributeName="cx" values="300;700;300" dur="15s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="-50;150;-50" dur="20s" repeatCount="indefinite" />
-  </circle>
+  <!-- Dot grid — sole decorative element, no blobs -->
+  <rect width="100%" height="100%" fill="url(#grid)" />
 
-  <!-- Animated Background Grid -->
-  <g opacity="0.5">
-    <animateTransform attributeName="transform" type="translate" values="0 0; -40 40" dur="3s" repeatCount="indefinite" />
-    <rect x="-40" y="-40" width="1080" height="380" fill="url(#grid)" />
-  </g>
+  <!-- Subtle scan line -->
+  <rect x="0" y="0" width="1000" height="1.5" fill="#34d399" opacity="0">
+    <animate attributeName="y"       values="-2;302;-2"  dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.10;0"   dur="7s" repeatCount="indefinite"/>
+  </rect>
 
-  <!-- Floating Particles -->
-  <g fill="#00f3ff">
-    <!-- Row 1 -->
-    <circle cx="100" cy="350" r="2.5" opacity="0.8">
-      <animate attributeName="cy" values="350;-50" dur="12s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="100;130;100" dur="4s" repeatCount="indefinite" />
+  <!-- Floating Particles — emerald + amber -->
+  <g>
+    <circle cx="100" cy="350" r="2.5" fill="#34d399" opacity="0.6">
+      <animate attributeName="cy" values="350;-50"         dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="100;130;100"     dur="4s"  repeatCount="indefinite"/>
     </circle>
-    <circle cx="300" cy="350" r="1.5" opacity="0.5">
-      <animate attributeName="cy" values="350;-50" dur="18s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="300;270;300" dur="6s" repeatCount="indefinite" />
+    <circle cx="300" cy="350" r="1.5" fill="#34d399" opacity="0.4">
+      <animate attributeName="cy" values="350;-50"         dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="300;270;300"     dur="6s"  repeatCount="indefinite"/>
     </circle>
-    <circle cx="500" cy="350" r="3" opacity="0.9">
-      <animate attributeName="cy" values="350;-50" dur="10s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="500;540;500" dur="5s" repeatCount="indefinite" />
+    <circle cx="500" cy="350" r="3" fill="#34d399" opacity="0.7">
+      <animate attributeName="cy" values="350;-50"         dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="500;540;500"     dur="5s"  repeatCount="indefinite"/>
     </circle>
-    <circle cx="700" cy="350" r="2" opacity="0.6">
-      <animate attributeName="cy" values="350;-50" dur="15s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="700;670;700" dur="7s" repeatCount="indefinite" />
+    <circle cx="700" cy="350" r="2" fill="#d97706" opacity="0.5">
+      <animate attributeName="cy" values="350;-50"         dur="15s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="700;670;700"     dur="7s"  repeatCount="indefinite"/>
     </circle>
-    <circle cx="900" cy="350" r="2.5" opacity="0.7">
-      <animate attributeName="cy" values="350;-50" dur="14s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="900;940;900" dur="4.5s" repeatCount="indefinite" />
+    <circle cx="900" cy="350" r="2.5" fill="#34d399" opacity="0.6">
+      <animate attributeName="cy" values="350;-50"         dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="900;940;900"     dur="4.5s" repeatCount="indefinite"/>
     </circle>
-    
-    <!-- Row 2 -->
-    <circle cx="200" cy="350" r="2" opacity="0.6" fill="#bc13fe">
-      <animate attributeName="cy" values="350;-50" dur="16s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="200;180;200" dur="5s" repeatCount="indefinite" />
+    <circle cx="200" cy="350" r="2" fill="#d97706" opacity="0.5">
+      <animate attributeName="cy" values="350;-50"         dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="200;180;200"     dur="5s"  repeatCount="indefinite"/>
     </circle>
-    <circle cx="400" cy="350" r="3" opacity="0.8" fill="#bc13fe">
-      <animate attributeName="cy" values="350;-50" dur="11s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="400;440;400" dur="4s" repeatCount="indefinite" />
+    <circle cx="600" cy="350" r="1.5" fill="#34d399" opacity="0.4">
+      <animate attributeName="cy" values="350;-50"         dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="600;570;600"     dur="6.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="600" cy="350" r="1.5" opacity="0.5" fill="#bc13fe">
-      <animate attributeName="cy" values="350;-50" dur="19s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="600;570;600" dur="6.5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="800" cy="350" r="2.5" opacity="0.7" fill="#bc13fe">
-      <animate attributeName="cy" values="350;-50" dur="13s" repeatCount="indefinite" />
-      <animate attributeName="cx" values="800;830;800" dur="5.5s" repeatCount="indefinite" />
+    <circle cx="800" cy="350" r="2.5" fill="#d97706" opacity="0.45">
+      <animate attributeName="cy" values="350;-50"         dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="800;830;800"     dur="5.5s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Typography (OS Metadata Style) -->
+  <!-- Card panel — solid dark surface, 1px emerald border -->
   <g transform="translate(250, 20)">
-    <!-- OS Box Border -->
-    <rect class="os-box-border" x="0" y="0" width="500" height="260" />
-    
-    <!-- Non-blurred Shadow for Name -->
-    <text class="name" x="253" y="63" text-anchor="middle" fill="#00f3ff" stroke="none" opacity="0.15">
-      KAARTHIC RAJA
-    </text>
-    <!-- Main Name -->
+    <rect class="os-box-border" x="0" y="0" width="500" height="260" rx="6"/>
+
+    <!-- Name -->
     <text class="name" x="250" y="60" text-anchor="middle">
       KAARTHIC RAJA
-      <animate attributeName="opacity" values="0.85; 1; 0.85" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite"/>
     </text>
 
-    <!-- Subtitle -->
-    <text class="os-box-title" x="40" y="115">DeveloperOS Kernel v3.2</text>
-    
-    <!-- Divider -->
-    <line x1="40" y1="130" x2="460" y2="130" stroke="#bc13fe" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 4" />
+    <!-- Role subtitle -->
+    <text class="os-box-title" x="250" y="98" text-anchor="middle">
+      CLOUD ENGINEER  ·  DEVOPS  ·  FLUTTER  ·  AI
+    </text>
 
-    <!-- OS Stats Grid -->
-    <g class="os-box" transform="translate(40, 165)">
+    <!-- Divider -->
+    <line x1="40" y1="115" x2="460" y2="115" stroke="#1e261e" stroke-width="1"/>
+
+    <!-- Stack details grid -->
+    <g class="os-box" transform="translate(40, 150)">
       <text x="0" y="0">
-        <tspan class="os-box-key">Kernel........</tspan> <tspan class="os-box-val">Linux</tspan>
+        <tspan class="os-box-key">Cloud......</tspan> <tspan class="os-box-val">AWS · Azure</tspan>
       </text>
-      <text x="0" y="30">
-        <tspan class="os-box-key">Runtime.......</tspan> <tspan class="os-box-val">Docker</tspan>
+      <text x="0" y="28">
+        <tspan class="os-box-key">Container..</tspan> <tspan class="os-box-val">Docker · K8s</tspan>
       </text>
-      <text x="0" y="60">
-        <tspan class="os-box-key">Cloud.........</tspan> <tspan class="os-box-val">AWS | Azure</tspan>
+      <text x="0" y="56">
+        <tspan class="os-box-key">IaC........</tspan> <tspan class="os-box-val">Terraform</tspan>
       </text>
     </g>
 
-    <g class="os-box" transform="translate(260, 165)">
+    <g class="os-box" transform="translate(270, 150)">
       <text x="0" y="0">
-        <tspan class="os-box-key">AI Core.......</tspan> <tspan class="os-box-val-magenta">Active</tspan>
+        <tspan class="os-box-key">Mobile.....</tspan> <tspan class="os-box-val-warm">Flutter</tspan>
       </text>
-      <text x="0" y="30">
-        <tspan class="os-box-key">Status........</tspan> <tspan class="os-box-val" fill="#10B981">ONLINE </tspan>
+      <text x="0" y="28">
+        <tspan class="os-box-key">Automation.</tspan> <tspan class="os-box-val">Python · LLM</tspan>
       </text>
-      <!-- Blinking Status Dot -->
-      <circle cx="160" cy="25" r="5" fill="#10B981">
-        <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+      <!-- Blinking status dot -->
+      <circle cx="172" cy="79" r="4" fill="#34d399">
+        <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
       </circle>
+      <text x="0" y="84">
+        <tspan class="os-box-key">Status.....</tspan> <tspan class="os-box-val">Available</tspan>
+      </text>
     </g>
   </g>
 

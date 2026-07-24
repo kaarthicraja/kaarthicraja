@@ -7,20 +7,20 @@
   </defs>
 
   <!-- BG -->
-  <rect width="720" height="340" fill="#0a0c12" rx="10"/>
-  <rect x="1" y="1" width="718" height="338" fill="none" stroke="#00f3ff" stroke-width="1" rx="10" opacity="0.3"/>
+  <rect width="720" height="340" fill="#111211" rx="10"/>
+  <rect x="1" y="1" width="718" height="338" fill="none" stroke="#34d399" stroke-width="1" rx="10" opacity="0.3"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="720" height="34" fill="#111520" rx="10"/>
-  <rect x="0" y="24" width="720" height="10" fill="#111520"/>
+  <rect x="0" y="0" width="720" height="34" fill="#181a18" rx="10"/>
+  <rect x="0" y="24" width="720" height="10" fill="#181a18"/>
   <circle cx="20" cy="17" r="6" fill="#ff5f56"/>
   <circle cx="40" cy="17" r="6" fill="#ffbd2e"/>
   <circle cx="60" cy="17" r="6" fill="#27c93f"/>
-  <text x="360" y="22" font-family="'Courier New', monospace" font-size="12" fill="#4a5568" text-anchor="middle">kaarthic@kaarthic-os ~ bash</text>
+  <text x="360" y="22" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#4a524a" text-anchor="middle">kaarthic ~ bash</text>
 
   <!-- Prompt prefix text, always visible -->
-  <text x="16" y="60" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">kaarthic@os</text>
-  <text x="108" y="60" font-family="'Courier New', monospace" font-size="13" fill="#00f3ff">:~$</text>
+  <text x="16" y="60" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">kaarthic</text>
+  <text x="108" y="60" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#34d399">:~$</text>
 
   <!--
     ANIMATION TIMELINE (60s loop):
@@ -40,100 +40,100 @@
   -->
 
   <!-- LINE 1: $ whoami -->
-  <text x="130" y="60" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">
+  <text x="130" y="60" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">
     <animate attributeName="textLength" values="0;84;84;84;84;84;84;84;84;84;84;84;84;84;84" keyTimes="0;0.067;0.12;0.18;0.27;0.35;0.42;0.5;0.58;0.65;0.72;0.80;0.87;0.93;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="lengthAdjust" values="spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs" dur="60s" repeatCount="indefinite"/>
     whoami
   </text>
 
   <!-- Output 1: Automation Builder -->
-  <text x="16" y="80" font-family="'Courier New', monospace" font-size="13" fill="#00f3ff">
+  <text x="16" y="80" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#34d399">
     <animate attributeName="opacity" values="0;0;1;1;1;1;1;1;1;1;1;1;1;1;0" keyTimes="0;0.065;0.10;0.15;0.25;0.35;0.45;0.55;0.65;0.75;0.82;0.88;0.93;0.97;1" dur="60s" repeatCount="indefinite"/>
     Automation Builder | Cloud Engineer | Flutter Dev
   </text>
 
   <!-- LINE 2: $ docker compose up -->
-  <text x="16" y="108" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">
+  <text x="16" y="108" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">
     <animate attributeName="opacity" values="0;0;1;1;1;1;1;1;1;1;1;1;0" keyTimes="0;0.10;0.12;0.2;0.3;0.42;0.55;0.65;0.75;0.85;0.93;0.97;1" dur="60s" repeatCount="indefinite"/>
-    kaarthic@os:~$
+    kaarthic:~$
   </text>
-  <text x="130" y="108" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">
+  <text x="130" y="108" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">
     <animate attributeName="opacity" values="0;0;1;1;1;1;1;1;1;1;1;1;0" keyTimes="0;0.10;0.12;0.2;0.3;0.42;0.55;0.65;0.75;0.85;0.93;0.97;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="textLength" values="0;0;0;220;220;220;220;220;220;220;220;220;0" keyTimes="0;0.10;0.115;0.18;0.27;0.38;0.5;0.6;0.7;0.82;0.92;0.97;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="lengthAdjust" values="spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs" dur="60s" repeatCount="indefinite"/>
     docker compose up
   </text>
-  <text x="16" y="128" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7">
+  <text x="16" y="128" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6ee7b7">
     <animate attributeName="opacity" values="0;0;0;1;1;1;1;1;1;1;1;0" keyTimes="0;0.17;0.22;0.25;0.38;0.5;0.62;0.72;0.82;0.9;0.95;1" dur="60s" repeatCount="indefinite"/>
     ✓ app_web_1 Running   ✓ app_db_1 Running   ✓ app_redis_1 Running
   </text>
 
   <!-- LINE 3: $ kubectl get pods -->
-  <text x="16" y="158" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">
+  <text x="16" y="158" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">
     <animate attributeName="opacity" values="0;0;0;1;1;1;1;1;1;1;0" keyTimes="0;0.22;0.24;0.27;0.4;0.55;0.68;0.78;0.88;0.96;1" dur="60s" repeatCount="indefinite"/>
-    kaarthic@os:~$
+    kaarthic:~$
   </text>
-  <text x="130" y="158" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">
+  <text x="130" y="158" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">
     <animate attributeName="opacity" values="0;0;0;1;1;1;1;1;1;1;0" keyTimes="0;0.22;0.24;0.27;0.4;0.55;0.68;0.78;0.88;0.96;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="textLength" values="0;0;0;0;165;165;165;165;165;165;0" keyTimes="0;0.22;0.24;0.25;0.3;0.42;0.55;0.68;0.8;0.94;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="lengthAdjust" values="spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs" dur="60s" repeatCount="indefinite"/>
     kubectl get pods
   </text>
-  <text x="16" y="178" font-family="'Courier New', monospace" font-size="12" fill="#00ff9f">
+  <text x="16" y="178" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#a7f3d0">
     <animate attributeName="opacity" values="0;0;0;0;1;1;1;1;1;0" keyTimes="0;0.29;0.31;0.33;0.36;0.52;0.68;0.84;0.96;1" dur="60s" repeatCount="indefinite"/>
     api-pod-7d8f Running/Ready   worker-pod-5c9b Running/Ready
   </text>
 
   <!-- LINE 4: $ terraform apply -->
-  <text x="16" y="208" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">
+  <text x="16" y="208" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">
     <animate attributeName="opacity" values="0;0;0;0;1;1;1;1;0" keyTimes="0;0.33;0.35;0.37;0.4;0.58;0.75;0.92;1" dur="60s" repeatCount="indefinite"/>
-    kaarthic@os:~$
+    kaarthic:~$
   </text>
-  <text x="130" y="208" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">
+  <text x="130" y="208" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">
     <animate attributeName="opacity" values="0;0;0;0;1;1;1;1;0" keyTimes="0;0.33;0.35;0.37;0.4;0.58;0.75;0.92;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="textLength" values="0;0;0;0;0;154;154;154;0" keyTimes="0;0.33;0.35;0.37;0.38;0.43;0.6;0.9;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="lengthAdjust" values="spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs" dur="60s" repeatCount="indefinite"/>
     terraform apply
   </text>
-  <text x="16" y="228" font-family="'Courier New', monospace" font-size="12" fill="#bb9af7">
+  <text x="16" y="228" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6ee7b7">
     <animate attributeName="opacity" values="0;0;0;0;0;1;1;1;0" keyTimes="0;0.40;0.42;0.44;0.46;0.50;0.65;0.90;1" dur="60s" repeatCount="indefinite"/>
     Apply complete! Resources: 12 added, 0 changed, 0 destroyed.
   </text>
 
   <!-- LINE 5: $ flutter build apk  -->
-  <text x="16" y="258" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">
+  <text x="16" y="258" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">
     <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.46;0.48;0.5;0.52;0.55;0.82;1" dur="60s" repeatCount="indefinite"/>
-    kaarthic@os:~$
+    kaarthic:~$
   </text>
-  <text x="130" y="258" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">
+  <text x="130" y="258" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">
     <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.46;0.48;0.5;0.52;0.55;0.82;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="textLength" values="0;0;0;0;0;0;176;0" keyTimes="0;0.46;0.48;0.5;0.52;0.53;0.6;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="lengthAdjust" values="spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs" dur="60s" repeatCount="indefinite"/>
     flutter build apk
   </text>
-  <text x="16" y="278" font-family="'Courier New', monospace" font-size="12" fill="#54C5F8">
+  <text x="16" y="278" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#54C5F8">
     <animate attributeName="opacity" values="0;0;0;0;0;0;1;0" keyTimes="0;0.52;0.55;0.58;0.60;0.63;0.66;1" dur="60s" repeatCount="indefinite"/>
     ✓ Built build/app/outputs/flutter-apk/app-release.apk (18.2MB)
   </text>
 
   <!-- LINE 6: $ git push origin main -->
-  <text x="16" y="308" font-family="'Courier New', monospace" font-size="13" fill="#00ff9f">
+  <text x="16" y="308" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">
     <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.62;0.64;0.66;0.68;0.7;0.72;0.93;1" dur="60s" repeatCount="indefinite"/>
-    kaarthic@os:~$
+    kaarthic:~$
   </text>
-  <text x="130" y="308" font-family="'Courier New', monospace" font-size="13" fill="#a9b1d6">
+  <text x="130" y="308" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">
     <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.62;0.64;0.66;0.68;0.7;0.72;0.93;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="textLength" values="0;0;0;0;0;0;0;209;0" keyTimes="0;0.62;0.64;0.66;0.68;0.70;0.71;0.76;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="lengthAdjust" values="spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs;spacingAndGlyphs" dur="60s" repeatCount="indefinite"/>
     git push origin main
   </text>
-  <text x="16" y="328" font-family="'Courier New', monospace" font-size="12" fill="#f7a928">
+  <text x="16" y="328" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#d97706">
     <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;0" keyTimes="0;0.70;0.73;0.75;0.77;0.79;0.81;0.83;1" dur="60s" repeatCount="indefinite"/>
     → main..origin/main  [committed] 3 new commits pushed ✓
   </text>
 
   <!-- Blinking cursor that follows the last active line -->
-  <rect width="9" height="14" fill="#00f3ff">
+  <rect width="9" height="14" fill="#34d399">
     <animate attributeName="x" values="130;130;130;130;130;130;130;130;130;130;130;130" keyTimes="0;0.05;0.1;0.2;0.35;0.47;0.6;0.72;0.82;0.9;0.97;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="y" values="48;48;110;110;160;160;210;260;260;310;310;48" keyTimes="0;0.07;0.12;0.23;0.30;0.44;0.52;0.64;0.76;0.83;0.98;1" dur="60s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>

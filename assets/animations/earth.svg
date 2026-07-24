@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <radialGradient id="earth-grad" cx="40%" cy="35%" r="60%">
@@ -13,10 +13,10 @@
       <circle cx="100" cy="100" r="72"/>
     </clipPath>
   </defs>
-  <rect width="200" height="200" fill="#0d0f14"/>
+  <rect width="200" height="200" fill="#111211"/>
 
   <!-- Glow ring -->
-  <circle cx="100" cy="100" r="76" fill="none" stroke="#00f3ff" stroke-width="3" opacity="0.5" filter="url(#glow)">
+  <circle cx="100" cy="100" r="76" fill="none" stroke="#34d399" stroke-width="3" opacity="0.5" filter="url(#glow)">
     <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite"/>
   </circle>
 
