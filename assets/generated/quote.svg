@@ -28,10 +28,10 @@
 
   <!-- Quote text -->
   <text x="60" y="58" class="mono" font-size="20" fill="#00f3ff" filter="url(#glow)" font-weight="bold">
-    <tspan x="60" dy="0">Code is like humor. When you have to explain it,</tspan><tspan x="60" dy="28">it's bad.</tspan>
+    <tspan x="60" dy="0">Before software can be reusable it first has to be</tspan><tspan x="60" dy="28">usable.</tspan>
   </text>
 
   <!-- Author -->
   <text x="750" y="124" class="mono" font-size="16" fill="#bb9af7"
-        font-style="italic" text-anchor="end">~ Cory House</text>
+        font-style="italic" text-anchor="end">~ Ralph Johnson</text>
 </svg>
