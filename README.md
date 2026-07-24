@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="assets/animations/banner.svg" alt="KAARTHIC OS v3.2 — Kaarthic Raja" width="95%"/>
+  <img src="assets/banner.svg" alt="KAARTHIC OS v3.2 — Kaarthic Raja" width="95%"/>
 </div>
 
 <div align="center">
