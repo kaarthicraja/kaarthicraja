@@ -86,18 +86,20 @@ I'm **Kaarthic Raja** — an engineer who builds systems that *automate themselv
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Stats & Metrics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kaarthicraja&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0c12&title_color=00f3ff&text_color=a9b1d6&icon_color=bb9af7&include_all_commits=true&count_private=true" height="185" alt="GitHub Stats"/>
-  &nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=tokyonight&hide_border=true&background=0a0c12&ring=00f3ff&fire=bb9af7&currStreakNum=ffffff&sideNums=a9b1d6&currStreakLabel=00f3ff" height="185" alt="GitHub Streak"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/generated/metrics.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/generated/metrics.svg">
+    <img alt="GitHub Metrics" src="assets/generated/metrics.svg" width="100%"/>
+  </picture>
 </div>
 
-## 🌐 Top Languages
+<br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaarthicraja&theme=tokyonight&hide_border=true&bg_color=0a0c12&title_color=00f3ff&text_color=a9b1d6&layout=compact&langs_count=10" alt="Top Languages"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=tokyonight&hide_border=true&background=0a0c12&ring=00f3ff&fire=bb9af7&currStreakNum=ffffff&sideNums=a9b1d6&currStreakLabel=00f3ff" height="185" alt="GitHub Streak"/>
 </div>
 
 ---
