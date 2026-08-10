@@ -28,10 +28,10 @@
 
   <!-- Quote text -->
   <text x="60" y="69" class="mono" font-size="20" fill="#00f3ff" filter="url(#glow)" font-weight="bold">
-    <tspan x="60" dy="0">Truth can only be found in one place: the code.</tspan>
+    <tspan x="60" dy="0">Talk is cheap. Show me the code.</tspan>
   </text>
 
   <!-- Author -->
   <text x="750" y="118" class="mono" font-size="16" fill="#bb9af7"
-        font-style="italic" text-anchor="end">~ Robert C. Martin</text>
+        font-style="italic" text-anchor="end">~ Linus Torvalds</text>
 </svg>
