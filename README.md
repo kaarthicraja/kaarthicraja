@@ -67,15 +67,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=dark&hide_border=true&background=0A0A0A&ring=E8A33D&fire=E8A33D&currStreakNum=EAEAEA&sideNums=8A8A8A&currStreakLabel=E8A33D&dates=555555" height="185" alt="GitHub Streak"/>
-</div>
-
----
-
-## Contribution Graph
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaarthicraja&bg_color=0A0A0A&color=E8A33D&line=E8A33D&point=EAEAEA&hide_border=true&area=true&area_color=E8A33D" width="100%" alt="Activity Graph"/>
+  <img src="https://streak-stats.demolab.com/?user=kaarthicraja&theme=dark&hide_border=true&background=0A0A0A&ring=E8A33D&fire=E8A33D&currStreakNum=EAEAEA&sideNums=8A8A8A&currStreakLabel=E8A33D&dates=555555" height="185" alt="GitHub Streak"/>
 </div>
 
 ---
