@@ -28,10 +28,10 @@
 
   <!-- Quote text -->
   <text x="60" y="69" class="mono" font-size="20" fill="#93c5fd" filter="url(#glow)" font-weight="bold">
-    <tspan x="60" dy="0">First, solve the problem. Then, write the code.</tspan>
+    <tspan x="60" dy="0">Simplicity is the soul of efficiency.</tspan>
   </text>
 
   <!-- Author -->
   <text x="750" y="118" class="mono" font-size="16" fill="#60a5fa"
-        font-style="italic" text-anchor="end">~ John Johnson</text>
+        font-style="italic" text-anchor="end">~ Austin Freeman</text>
 </svg>
