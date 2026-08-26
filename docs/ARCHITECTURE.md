@@ -93,21 +93,18 @@ All SVGs in `assets/animations/` use **SMIL (Synchronized Multimedia Integration
 
 | File | Purpose | Key Animation |
 |------|---------|---------------|
-| `banner.svg` | DeveloperOS boot screen | Blinking cursor, aurora pulse |
-| `typing.svg` | Cycling role titles | Opacity keyframe fade |
-| `hero-background.svg` | Cyberpunk grid + aurora | Scanning line, ellipse breathe |
-| `skills.svg` | Skill bar chart | `<animate>` width fill-freeze |
-| `timeline.svg` | Career milestones | Node pulse, opacity breathe |
-| `project-card.svg` | Project showcase card | Status badge pulse |
-| `pipeline.svg` | CI/CD flow diagram | `<animateMotion>` dot traversal |
-| `neural.svg` | AI neural network | Node expand-contract |
-| `binary.svg` | Matrix binary rain | y-translate columns |
-| `rocket.svg` | Launch rocket | y-translate hover, flame morph |
-| `earth.svg` | Rotating globe | Land mass translate |
-| `clouds.svg` | Parallax clouds | Layered x-translate |
-| `quote-box.svg` | Quote frame | Stroke-dashoffset |
-| `social-icons.svg` | Contact icons | Stroke color cycle |
-| `footer-wave.svg` | Closing wave | x-translate two layers |
+| `assets/banner.svg` | Hero nameplate card | Underline sweep, status pulse |
+| `animations/typing.svg` | Cycling role titles | Clip-path typewriter reveal |
+| `animations/hero-background.svg` | Ambient grid + glow | Scanning line, ellipse breathe |
+| `animations/skills.svg` | Tech stack icon grid | Ring pulse per icon |
+| `animations/dashboard.svg` | Engineering metrics panel | Bar fill, live counters |
+| `animations/pipeline.svg` | CI/CD flow diagram | `<animateMotion>` dot traversal |
+| `animations/earth.svg` | Rotating globe | Land mass translate |
+| `animations/project-card.svg` | Project showcase card | Status badge pulse |
+| `animations/timeline.svg` | Career milestones | Node pulse, opacity breathe |
+| `animations/social-icons.svg` | Contact icons | Stroke color cycle |
+| `animations/footer-wave.svg` | Closing wave | x-translate two layers |
+| `terminal.svg` | Live terminal simulation | `textLength` typewriter, cursor travel |
 
 ---
 
@@ -115,9 +112,9 @@ All SVGs in `assets/animations/` use **SMIL (Synchronized Multimedia Integration
 
 Each component is designed to be **independently replaceable**:
 
-- To swap the banner: replace `assets/animations/banner.svg`
+- To swap the banner: replace `assets/banner.svg`
 - To add a new quote: add an object to `quotes.json`
-- To change the color scheme: find/replace `#00f3ff` (cyan) and `#bb9af7` (purple) across `assets/animations/`
+- To change the color scheme: find/replace the palette across `assets/` — base `#0a1120`/`#060a17`, accents `#3b82f6` (blue), `#60a5fa` (light blue), `#22d3ee` (cyan)
 - To add a new icon: drop an SVG into `assets/icons/` and reference it in `README.md`
 
 The `assets/generated/` folder should **never be manually edited** — its contents are always overwritten by the automation workflows.

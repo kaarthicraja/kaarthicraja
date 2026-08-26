@@ -4,112 +4,108 @@
       <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="bar-full" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34d399" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#34d399"/>
+    <linearGradient id="bar-a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
     </linearGradient>
-    <linearGradient id="bar-ram" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6ee7b7" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#6ee7b7"/>
+    <linearGradient id="bar-b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
-    <linearGradient id="bar-net" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#a7f3d0"/>
+    <linearGradient id="bar-c" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
     </linearGradient>
-    <linearGradient id="bar-tmp" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d97706" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#d97706"/>
+    <linearGradient id="bar-d" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#818cf8"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="700" height="280" fill="#111211" rx="10"/>
-  <rect x="1" y="1" width="698" height="278" fill="none" stroke="#34d399" stroke-width="1.2" rx="10" opacity="0.4" filter="url(#glow-sm)"/>
+  <rect width="700" height="280" fill="#0a1120" rx="10"/>
+  <rect x="1" y="1" width="698" height="278" fill="none" stroke="#3b82f6" stroke-width="1.2" rx="10" opacity="0.35" filter="url(#glow-sm)"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="700" height="30" fill="#181a18" rx="10"/>
-  <rect x="0" y="20" width="700" height="10" fill="#181a18"/>
-  <text x="16" y="19" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#34d399">SYSTEM STATUS</text>
-  <text x="350" y="19" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#4a524a" text-anchor="middle">// dashboard</text>
+  <rect x="0" y="0" width="700" height="30" fill="#0d1830" rx="10"/>
+  <rect x="0" y="20" width="700" height="10" fill="#0d1830"/>
+  <text x="16" y="19" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#93c5fd">ENGINEERING METRICS</text>
+  <text x="380" y="19" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8" text-anchor="middle">// live dashboard</text>
 
   <!-- Status dot -->
-  <circle cx="670" cy="15" r="5" fill="#a7f3d0" filter="url(#glow-sm)">
+  <circle cx="670" cy="15" r="5" fill="#22d3ee" filter="url(#glow-sm)">
     <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="652" y="19" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="10" fill="#a7f3d0" text-anchor="end">ONLINE</text>
+  <text x="652" y="19" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="10" fill="#22d3ee" text-anchor="end">ONLINE</text>
 
   <!-- ── Metric rows ── -->
-  <!-- Row helper: label | track | bar | value -->
 
-  <!-- CPU -->
-  <text x="20" y="62" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b736b">CPU</text>
-  <rect x="90" y="50" width="530" height="12" fill="#1f211f" rx="6"/>
-  <rect x="90" y="50" width="0"   height="12" fill="url(#bar-full)" rx="6">
-    <animate attributeName="width" values="370;420;360;410;370" keyTimes="0;0.25;0.5;0.75;1" dur="8s" repeatCount="indefinite"/>
+  <!-- Deploy success rate -->
+  <text x="20" y="62" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b7fa3">DEPLOY</text>
+  <rect x="120" y="50" width="460" height="12" fill="#101c33" rx="6"/>
+  <rect x="120" y="50" width="0"   height="12" fill="url(#bar-a)" rx="6">
+    <animate attributeName="width" values="440;448;434;446;440" keyTimes="0;0.25;0.5;0.75;1" dur="8s" repeatCount="indefinite"/>
   </rect>
-  <text x="638" y="62" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#34d399">
-    <animate attributeName="textContent" values="72%;79%;68%;77%;72%" keyTimes="0;0.25;0.5;0.75;1" dur="8s" repeatCount="indefinite"/>72%
+  <text x="638" y="62" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#93c5fd" text-anchor="end">98%</text>
+
+  <!-- Infra uptime -->
+  <text x="20" y="96" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b7fa3">UPTIME</text>
+  <rect x="120" y="84" width="460" height="12" fill="#101c33" rx="6"/>
+  <rect x="120" y="84" width="0"   height="12" fill="url(#bar-b)" rx="6">
+    <animate attributeName="width" values="452;454;450;453;452" keyTimes="0;0.25;0.5;0.75;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <text x="638" y="96" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#bfdbfe" text-anchor="end">99.9%</text>
+
+  <!-- Automation coverage -->
+  <text x="20" y="130" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b7fa3">AUTOMATION</text>
+  <rect x="120" y="118" width="460" height="12" fill="#101c33" rx="6"/>
+  <rect x="120" y="118" width="0"   height="12" fill="url(#bar-c)" rx="6">
+    <animate attributeName="width" values="391;409;376;400;391" keyTimes="0;0.25;0.5;0.75;1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="638" y="130" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#22d3ee" text-anchor="end">
+    <animate attributeName="textContent" values="85%;89%;82%;87%;85%" keyTimes="0;0.25;0.5;0.75;1" dur="6s" repeatCount="indefinite"/>85%
   </text>
 
-  <!-- RAM -->
-  <text x="20" y="96" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b736b">RAM</text>
-  <rect x="90" y="84" width="530" height="12" fill="#1f211f" rx="6"/>
-  <rect x="90" y="84" width="0"   height="12" fill="url(#bar-ram)" rx="6">
-    <animate attributeName="width" values="265;280;255;275;265" keyTimes="0;0.25;0.5;0.75;1" dur="10s" repeatCount="indefinite"/>
+  <!-- Avg build time -->
+  <text x="20" y="164" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b7fa3">BUILD TIME</text>
+  <rect x="120" y="152" width="460" height="12" fill="#101c33" rx="6"/>
+  <rect x="120" y="152" width="0"   height="12" fill="url(#bar-d)" rx="6">
+    <animate attributeName="width" values="150;165;140;158;150" keyTimes="0;0.25;0.5;0.75;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <text x="638" y="96" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#6ee7b7">5.1G</text>
-
-  <!-- NETWORK -->
-  <text x="20" y="130" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b736b">NET</text>
-  <rect x="90" y="118" width="530" height="12" fill="#1f211f" rx="6"/>
-  <rect x="90" y="118" width="0"   height="12" fill="url(#bar-net)" rx="6">
-    <animate attributeName="width" values="450;510;380;490;450" keyTimes="0;0.25;0.5;0.75;1" dur="5s" repeatCount="indefinite"/>
-  </rect>
-  <text x="638" y="130" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#a7f3d0">
-    <animate attributeName="textContent" values="128M;142M;108M;136M;128M" keyTimes="0;0.25;0.5;0.75;1" dur="5s" repeatCount="indefinite"/>128M
-  </text>
-
-  <!-- TEMP -->
-  <text x="20" y="164" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#6b736b">TEMP</text>
-  <rect x="90" y="152" width="530" height="12" fill="#1f211f" rx="6"/>
-  <rect x="90" y="152" width="0"   height="12" fill="url(#bar-tmp)" rx="6">
-    <animate attributeName="width" values="318;339;306;328;318" keyTimes="0;0.25;0.5;0.75;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="638" y="164" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#d97706">60°C</text>
+  <text x="638" y="164" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#818cf8" text-anchor="end">3m 40s</text>
 
   <!-- Divider -->
-  <line x1="20" y1="185" x2="680" y2="185" stroke="#1e261e" stroke-width="1"/>
+  <line x1="20" y1="185" x2="680" y2="185" stroke="#16233b" stroke-width="1"/>
 
   <!-- Stats row -->
-  <text x="20"  y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#4a524a">UPTIME</text>
-  <text x="20"  y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#34d399">365d 12h</text>
+  <text x="20"  y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8">EXPERIENCE</text>
+  <text x="20"  y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#93c5fd">3+ years</text>
 
-  <text x="195" y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#4a524a">PROCESSES</text>
-  <text x="195" y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#6ee7b7">
-    <animate attributeName="textContent" values="247;251;244;249;247" keyTimes="0;0.25;0.5;0.75;1" dur="7s" repeatCount="indefinite"/>247
+  <text x="195" y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8">PROJECTS SHIPPED</text>
+  <text x="195" y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#60a5fa">
+    <animate attributeName="textContent" values="24;25;23;24;24" keyTimes="0;0.25;0.5;0.75;1" dur="7s" repeatCount="indefinite"/>24
   </text>
 
-  <text x="370" y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#4a524a">CONTAINERS</text>
-  <text x="370" y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#a7f3d0">
+  <text x="370" y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8">CONTAINERS</text>
+  <text x="370" y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#22d3ee">
     <animate attributeName="textContent" values="12 running;12 running;13 running;12 running;12 running" keyTimes="0;0.25;0.5;0.75;1" dur="9s" repeatCount="indefinite"/>12 running
   </text>
 
-  <text x="555" y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#4a524a">BUILD</text>
-  <text x="555" y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#d1d5d1">v3.2</text>
+  <text x="555" y="210" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8">STATUS</text>
+  <text x="555" y="226" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="13" fill="#e2e8f0">Available</text>
 
   <!-- Activity mini-graph -->
-  <text x="20" y="258" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#4a524a">ACTIVITY</text>
-  <g transform="translate(90, 244)">
-    <!-- Mini bars -->
-    <rect x="0"   y="8"  width="12" height="12" fill="#34d399" rx="2" opacity="0.7"><animate attributeName="height" values="12;18;10;15;12" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="8;2;10;5;8" dur="4s" repeatCount="indefinite"/></rect>
-    <rect x="16"  y="5"  width="12" height="15" fill="#34d399" rx="2" opacity="0.6"><animate attributeName="height" values="15;8;20;12;15" dur="5s" repeatCount="indefinite"/><animate attributeName="y" values="5;12;0;8;5" dur="5s" repeatCount="indefinite"/></rect>
-    <rect x="32"  y="10" width="12" height="10" fill="#34d399" rx="2" opacity="0.5"><animate attributeName="height" values="10;16;6;14;10" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="10;4;14;6;10" dur="3s" repeatCount="indefinite"/></rect>
-    <rect x="48"  y="3"  width="12" height="17" fill="#34d399" rx="2" opacity="0.8"><animate attributeName="height" values="17;10;20;8;17" dur="6s" repeatCount="indefinite"/><animate attributeName="y" values="3;10;0;12;3" dur="6s" repeatCount="indefinite"/></rect>
-    <rect x="64"  y="7"  width="12" height="13" fill="#34d399" rx="2" opacity="0.7"><animate attributeName="height" values="13;20;8;16;13" dur="4.5s" repeatCount="indefinite"/><animate attributeName="y" values="7;0;12;4;7" dur="4.5s" repeatCount="indefinite"/></rect>
-    <rect x="80"  y="2"  width="12" height="18" fill="#6ee7b7" rx="2" opacity="0.7"><animate attributeName="height" values="18;12;20;6;18" dur="5.5s" repeatCount="indefinite"/><animate attributeName="y" values="2;8;0;14;2" dur="5.5s" repeatCount="indefinite"/></rect>
-    <rect x="96"  y="9"  width="12" height="11" fill="#34d399" rx="2" opacity="0.5"><animate attributeName="height" values="11;18;5;15;11" dur="3.5s" repeatCount="indefinite"/><animate attributeName="y" values="9;2;15;5;9" dur="3.5s" repeatCount="indefinite"/></rect>
-    <rect x="112" y="4"  width="12" height="16" fill="#a7f3d0" rx="2" opacity="0.7"><animate attributeName="height" values="16;9;20;11;16" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="4;11;0;9;4" dur="4s" repeatCount="indefinite"/></rect>
-    <rect x="128" y="6"  width="12" height="14" fill="#34d399" rx="2" opacity="0.6"><animate attributeName="height" values="14;20;7;17;14" dur="6s" repeatCount="indefinite"/><animate attributeName="y" values="6;0;13;3;6" dur="6s" repeatCount="indefinite"/></rect>
-    <rect x="144" y="1"  width="12" height="19" fill="#34d399" rx="2" opacity="0.9"><animate attributeName="height" values="19;11;20;8;19" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="1;9;0;12;1" dur="3s" repeatCount="indefinite"/></rect>
+  <text x="20" y="258" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8">COMMITS/WK</text>
+  <g transform="translate(120, 244)">
+    <rect x="0"   y="8"  width="12" height="12" fill="#3b82f6" rx="2" opacity="0.7"><animate attributeName="height" values="12;18;10;15;12" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="8;2;10;5;8" dur="4s" repeatCount="indefinite"/></rect>
+    <rect x="16"  y="5"  width="12" height="15" fill="#3b82f6" rx="2" opacity="0.6"><animate attributeName="height" values="15;8;20;12;15" dur="5s" repeatCount="indefinite"/><animate attributeName="y" values="5;12;0;8;5" dur="5s" repeatCount="indefinite"/></rect>
+    <rect x="32"  y="10" width="12" height="10" fill="#3b82f6" rx="2" opacity="0.5"><animate attributeName="height" values="10;16;6;14;10" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="10;4;14;6;10" dur="3s" repeatCount="indefinite"/></rect>
+    <rect x="48"  y="3"  width="12" height="17" fill="#3b82f6" rx="2" opacity="0.8"><animate attributeName="height" values="17;10;20;8;17" dur="6s" repeatCount="indefinite"/><animate attributeName="y" values="3;10;0;12;3" dur="6s" repeatCount="indefinite"/></rect>
+    <rect x="64"  y="7"  width="12" height="13" fill="#3b82f6" rx="2" opacity="0.7"><animate attributeName="height" values="13;20;8;16;13" dur="4.5s" repeatCount="indefinite"/><animate attributeName="y" values="7;0;12;4;7" dur="4.5s" repeatCount="indefinite"/></rect>
+    <rect x="80"  y="2"  width="12" height="18" fill="#60a5fa" rx="2" opacity="0.7"><animate attributeName="height" values="18;12;20;6;18" dur="5.5s" repeatCount="indefinite"/><animate attributeName="y" values="2;8;0;14;2" dur="5.5s" repeatCount="indefinite"/></rect>
+    <rect x="96"  y="9"  width="12" height="11" fill="#3b82f6" rx="2" opacity="0.5"><animate attributeName="height" values="11;18;5;15;11" dur="3.5s" repeatCount="indefinite"/><animate attributeName="y" values="9;2;15;5;9" dur="3.5s" repeatCount="indefinite"/></rect>
+    <rect x="112" y="4"  width="12" height="16" fill="#22d3ee" rx="2" opacity="0.7"><animate attributeName="height" values="16;9;20;11;16" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="4;11;0;9;4" dur="4s" repeatCount="indefinite"/></rect>
+    <rect x="128" y="6"  width="12" height="14" fill="#3b82f6" rx="2" opacity="0.6"><animate attributeName="height" values="14;20;7;17;14" dur="6s" repeatCount="indefinite"/><animate attributeName="y" values="6;0;13;3;6" dur="6s" repeatCount="indefinite"/></rect>
+    <rect x="144" y="1"  width="12" height="19" fill="#3b82f6" rx="2" opacity="0.9"><animate attributeName="height" values="19;11;20;8;19" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="1;9;0;12;1" dur="3s" repeatCount="indefinite"/></rect>
   </g>
 </svg>

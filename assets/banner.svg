@@ -1,150 +1,164 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
   <defs>
-    <!-- Background — warm charcoal, no aurora blobs -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#0d1210" />
-      <stop offset="50%"  stop-color="#0f1a14" />
-      <stop offset="100%" stop-color="#080e09" />
+    <linearGradient id="bn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#050810"/>
+      <stop offset="45%"  stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#050810"/>
     </linearGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#34d399" stroke-width="1" stroke-opacity="0.08"/>
+    <linearGradient id="bn-panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0c1730" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#08101f" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="bn-underline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#60a5fa" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="bn-glow-a" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bn-glow-b" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="bn-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.06"/>
     </pattern>
 
+    <filter id="bn-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
     <style>
-      .name {
+      .bn-name {
         font-family: 'Segoe UI', Inter, sans-serif;
-        font-size: 38px;
-        font-weight: 900;
-        fill: #ffffff;
-        letter-spacing: 5px;
+        font-size: 42px;
+        font-weight: 800;
+        fill: #f1f5f9;
+        letter-spacing: 4px;
       }
-      .os-box {
+      .bn-role {
+        font-family: 'Segoe UI', Inter, sans-serif;
+        font-size: 15.5px;
+        font-weight: 600;
+        fill: #93c5fd;
+        letter-spacing: 3px;
+      }
+      .bn-tag {
+        font-family: 'Segoe UI', Inter, sans-serif;
+        font-size: 13px;
+        fill: #64748b;
+      }
+      .bn-pill-text {
         font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
-        font-size: 14px;
+        font-size: 11.5px;
+        font-weight: 600;
+        fill: #bcd4f6;
       }
-      .os-box-border {
-        fill: none;
-        stroke: #34d399;
-        stroke-width: 1px;
-        stroke-opacity: 0.5;
-      }
-      .os-box-title {
-        fill: #6b736b;
+      .bn-status-text {
         font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
         font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 2px;
+        font-weight: 600;
+        fill: #22d3ee;
+        letter-spacing: 1px;
       }
-      .os-box-key  { fill: #4a524a; }
-      .os-box-val  { fill: #34d399; font-weight: bold; }
-      .os-box-val-warm { fill: #d97706; font-weight: bold; }
-      @keyframes blink {
+      @keyframes bn-pulse {
         0%, 100% { opacity: 1; }
-        50%       { opacity: 0; }
+        50%      { opacity: 0.35; }
       }
-      .cursor {
-        fill: #34d399;
-        animation: blink 0.8s step-end infinite;
-      }
+      .bn-dot { animation: bn-pulse 2s ease-in-out infinite; }
     </style>
   </defs>
 
   <!-- Background -->
-  <rect width="100%" height="100%" fill="url(#bg)" />
+  <rect width="100%" height="100%" fill="url(#bn-bg)"/>
+  <rect width="100%" height="100%" fill="url(#bn-grid)"/>
 
-  <!-- Dot grid — sole decorative element, no blobs -->
-  <rect width="100%" height="100%" fill="url(#grid)" />
+  <!-- Ambient glow orbs, slow drift -->
+  <ellipse cx="180" cy="60" rx="220" ry="140" fill="url(#bn-glow-a)">
+    <animate attributeName="cx" values="180;230;180" dur="16s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="850" cy="250" rx="220" ry="140" fill="url(#bn-glow-b)">
+    <animate attributeName="cx" values="850;800;850" dur="18s" repeatCount="indefinite"/>
+  </ellipse>
 
-  <!-- Subtle scan line -->
-  <rect x="0" y="0" width="1000" height="1.5" fill="#34d399" opacity="0">
-    <animate attributeName="y"       values="-2;302;-2"  dur="7s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.10;0"   dur="7s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Card panel -->
+  <g transform="translate(160, 26)">
+    <rect x="0" y="0" width="680" height="248" rx="10" fill="url(#bn-panel)" stroke="#1e3a5f" stroke-width="1"/>
+    <rect x="0" y="0" width="680" height="248" rx="10" fill="none" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.25"/>
 
-  <!-- Floating Particles — emerald + amber -->
-  <g>
-    <circle cx="100" cy="350" r="2.5" fill="#34d399" opacity="0.6">
-      <animate attributeName="cy" values="350;-50"         dur="12s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="100;130;100"     dur="4s"  repeatCount="indefinite"/>
-    </circle>
-    <circle cx="300" cy="350" r="1.5" fill="#34d399" opacity="0.4">
-      <animate attributeName="cy" values="350;-50"         dur="18s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="300;270;300"     dur="6s"  repeatCount="indefinite"/>
-    </circle>
-    <circle cx="500" cy="350" r="3" fill="#34d399" opacity="0.7">
-      <animate attributeName="cy" values="350;-50"         dur="10s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="500;540;500"     dur="5s"  repeatCount="indefinite"/>
-    </circle>
-    <circle cx="700" cy="350" r="2" fill="#d97706" opacity="0.5">
-      <animate attributeName="cy" values="350;-50"         dur="15s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="700;670;700"     dur="7s"  repeatCount="indefinite"/>
-    </circle>
-    <circle cx="900" cy="350" r="2.5" fill="#34d399" opacity="0.6">
-      <animate attributeName="cy" values="350;-50"         dur="14s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="900;940;900"     dur="4.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="200" cy="350" r="2" fill="#d97706" opacity="0.5">
-      <animate attributeName="cy" values="350;-50"         dur="16s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="200;180;200"     dur="5s"  repeatCount="indefinite"/>
-    </circle>
-    <circle cx="600" cy="350" r="1.5" fill="#34d399" opacity="0.4">
-      <animate attributeName="cy" values="350;-50"         dur="19s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="600;570;600"     dur="6.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="800" cy="350" r="2.5" fill="#d97706" opacity="0.45">
-      <animate attributeName="cy" values="350;-50"         dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="cx" values="800;830;800"     dur="5.5s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- Card panel — solid dark surface, 1px emerald border -->
-  <g transform="translate(250, 20)">
-    <rect class="os-box-border" x="0" y="0" width="500" height="260" rx="6"/>
+    <!-- Status badge -->
+    <g transform="translate(486, 22)">
+      <rect x="0" y="0" width="174" height="26" rx="13" fill="#08131f" stroke="#155e75" stroke-width="1"/>
+      <circle class="bn-dot" cx="17" cy="13" r="4" fill="#22d3ee"/>
+      <text class="bn-status-text" x="30" y="17">OPEN TO OPPORTUNITIES</text>
+    </g>
 
     <!-- Name -->
-    <text class="name" x="250" y="60" text-anchor="middle">
-      KAARTHIC RAJA
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="4s" repeatCount="indefinite"/>
-    </text>
+    <text class="bn-name" x="40" y="90">KAARTHIC RAJA</text>
 
-    <!-- Role subtitle -->
-    <text class="os-box-title" x="250" y="98" text-anchor="middle">
-      CLOUD ENGINEER  ·  DEVOPS  ·  FLUTTER  ·  AI
-    </text>
+    <!-- Animated underline sweep -->
+    <rect x="41" y="102" width="0" height="3" rx="1.5" fill="url(#bn-underline)">
+      <animate attributeName="width" values="0;300;300" keyTimes="0;0.5;1" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Role -->
+    <text class="bn-role" x="41" y="132">CLOUD &amp; DEVOPS ENGINEER</text>
+    <text class="bn-tag" x="41" y="154">Building resilient cloud platforms, automated pipelines &amp; cross-platform apps.</text>
 
     <!-- Divider -->
-    <line x1="40" y1="115" x2="460" y2="115" stroke="#1e261e" stroke-width="1"/>
+    <line x1="40" y1="175" x2="640" y2="175" stroke="#16233b" stroke-width="1"/>
 
-    <!-- Stack details grid -->
-    <g class="os-box" transform="translate(40, 150)">
-      <text x="0" y="0">
-        <tspan class="os-box-key">Cloud......</tspan> <tspan class="os-box-val">AWS · Azure</tspan>
-      </text>
-      <text x="0" y="28">
-        <tspan class="os-box-key">Container..</tspan> <tspan class="os-box-val">Docker · K8s</tspan>
-      </text>
-      <text x="0" y="56">
-        <tspan class="os-box-key">IaC........</tspan> <tspan class="os-box-val">Terraform</tspan>
-      </text>
-    </g>
-
-    <g class="os-box" transform="translate(270, 150)">
-      <text x="0" y="0">
-        <tspan class="os-box-key">Mobile.....</tspan> <tspan class="os-box-val-warm">Flutter</tspan>
-      </text>
-      <text x="0" y="28">
-        <tspan class="os-box-key">Automation.</tspan> <tspan class="os-box-val">Python · LLM</tspan>
-      </text>
-      <!-- Blinking status dot -->
-      <circle cx="172" cy="79" r="4" fill="#34d399">
-        <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="0" y="84">
-        <tspan class="os-box-key">Status.....</tspan> <tspan class="os-box-val">Available</tspan>
-      </text>
+    <!-- Stack pills, staggered fade-in -->
+    <g transform="translate(40, 194)">
+      <!-- pill template repeated -->
+      <g>
+        <rect x="0" y="0" width="66" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="33" y="17" text-anchor="middle">AWS</text>
+      </g>
+      <g transform="translate(78,0)">
+        <rect x="0" y="0" width="66" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0.3s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="33" y="17" text-anchor="middle">Azure</text>
+      </g>
+      <g transform="translate(156,0)">
+        <rect x="0" y="0" width="78" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0.6s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="39" y="17" text-anchor="middle">Docker</text>
+      </g>
+      <g transform="translate(246,0)">
+        <rect x="0" y="0" width="96" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0.9s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="48" y="17" text-anchor="middle">Kubernetes</text>
+      </g>
+      <g transform="translate(354,0)">
+        <rect x="0" y="0" width="90" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="1.2s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="45" y="17" text-anchor="middle">Terraform</text>
+      </g>
+      <g transform="translate(456,0)">
+        <rect x="0" y="0" width="76" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="38" y="17" text-anchor="middle">Flutter</text>
+      </g>
+      <g transform="translate(544,0)">
+        <rect x="0" y="0" width="72" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
+          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="1.8s" repeatCount="indefinite"/>
+        </rect>
+        <text class="bn-pill-text" x="36" y="17" text-anchor="middle">Python</text>
+      </g>
     </g>
   </g>
-
 </svg>

@@ -43,33 +43,33 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${svgH}" w
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#00f3ff" opacity="0.06"/>
+      <circle cx="2" cy="2" r="1.2" fill="#3b82f6" opacity="0.06"/>
     </pattern>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="${svgH}" fill="#0d0f14" rx="12"/>
+  <rect width="800" height="${svgH}" fill="#0a1120" rx="12"/>
   <rect width="800" height="${svgH}" fill="url(#dots)" rx="12"/>
 
-  <!-- Neon border -->
+  <!-- Border -->
   <rect x="2" y="2" width="796" height="${svgH - 4}" rx="11" fill="none"
-        stroke="#00f3ff" stroke-width="1.5" filter="url(#glow)" opacity="0.5">
+        stroke="#3b82f6" stroke-width="1.5" filter="url(#glow)" opacity="0.5">
     <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
   </rect>
 
   <!-- Left accent bar -->
-  <rect x="0" y="20" width="5" height="${svgH - 40}" fill="#bc13fe" rx="2"/>
+  <rect x="0" y="20" width="5" height="${svgH - 40}" fill="#22d3ee" rx="2"/>
 
   <!-- Giant decorative quote mark -->
-  <text x="18" y="${svgH * 0.75}" class="mono" font-size="100" fill="#00f3ff" opacity="0.07">"</text>
+  <text x="18" y="${svgH * 0.75}" class="mono" font-size="100" fill="#3b82f6" opacity="0.07">"</text>
 
   <!-- Quote text -->
-  <text x="60" y="${textStart}" class="mono" font-size="20" fill="#00f3ff" filter="url(#glow)" font-weight="bold">
+  <text x="60" y="${textStart}" class="mono" font-size="20" fill="#93c5fd" filter="url(#glow)" font-weight="bold">
     ${tspans}
   </text>
 
   <!-- Author -->
-  <text x="750" y="${svgH - 22}" class="mono" font-size="16" fill="#bb9af7"
+  <text x="750" y="${svgH - 22}" class="mono" font-size="16" fill="#60a5fa"
         font-style="italic" text-anchor="end">~ ${quote.author.replace(/&/g,'&amp;')}</text>
 </svg>`;
 

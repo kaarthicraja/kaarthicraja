@@ -38,8 +38,8 @@ jobs:
         with:
           github_user_name: kaarthicraja
           outputs: |
-            assets/generated/github-contribution-grid-snake.svg
-            assets/generated/github-contribution-grid-snake-dark.svg?palette=github-dark
+            assets/generated/github-contribution-grid-snake.svg?color_snake=#1d4ed8,#3b82f6,#60a5fa,#22d3ee&color_dots=#0a1120,#0f2444,#1e3a5f,#3b82f6,#60a5fa&color_empty=#0a1120
+            assets/generated/github-contribution-grid-snake-dark.svg?color_snake=#1d4ed8,#3b82f6,#60a5fa,#22d3ee&color_dots=#0a1120,#0f2444,#1e3a5f,#3b82f6,#60a5fa&color_empty=#0a1120
 
       - name: 📤 Commit & Push Snake SVGs
         uses: EndBug/add-and-commit@v9
