@@ -1,8 +1,4 @@
 <div align="center">
-  <img src="assets/animations/hero-background.svg" alt="" width="100%"/>
-</div>
-
-<div align="center">
   <img src="assets/banner.svg" alt="Kaarthic Raja — Cloud &amp; DevOps Engineer" width="95%"/>
 </div>
 
@@ -14,25 +10,21 @@
 
 ---
 
-## About Me
-
-<img align="right" src="assets/animations/earth.svg" width="130" alt="Global cloud infrastructure"/>
+## About
 
 I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that runs itself. I build automated cloud platforms, CI/CD pipelines, and cross-platform apps — this profile is one example, an animated portfolio generated entirely by its own GitHub Actions workflows.
 
-- ☁️ Cloud architecture on **AWS** and **Azure**
-- ⚙️ **CI/CD automation** — Docker, Kubernetes, Terraform
-- 📱 Cross-platform apps with **Flutter**
-- 🤖 **AI-driven automation** with Python and LLM pipelines
-- 🐧 Linux-first workflow, comfortable end-to-end in the terminal
+- Cloud architecture on **AWS** and **Azure**
+- **CI/CD automation** — Docker, Kubernetes, Terraform
+- Cross-platform apps with **Flutter**
+- **AI-driven automation** with Python and LLM pipelines
+- Linux-first workflow, comfortable end-to-end in the terminal
 
-> *Automate everything. Ship fast. Stay curious.*
-
-<br clear="right"/>
+> Automate everything. Ship fast. Stay curious.
 
 ---
 
-## Tech Stack
+## Stack
 
 <div align="center">
   <img src="assets/animations/skills.svg" alt="Tech Stack" width="95%"/>
@@ -40,7 +32,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 
 ---
 
-## Live Dashboard
+## Metrics
 
 <div align="center">
   <img src="assets/animations/dashboard.svg" alt="Engineering Metrics Dashboard" width="85%"/>
@@ -48,7 +40,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 
 ---
 
-## How I Ship — CI/CD in Action
+## Pipeline
 
 <div align="center">
   <img src="assets/animations/pipeline.svg" alt="CI/CD Pipeline" width="95%"/>
@@ -56,15 +48,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 
 ---
 
-## Terminal
-
-<div align="center">
-  <img src="assets/terminal.svg" alt="Live Terminal Simulation" width="90%"/>
-</div>
-
----
-
-## Featured Project &amp; Career Timeline
+## Project &amp; Career Log
 
 <div align="center">
   <img src="assets/animations/project-card.svg" width="46%" alt="Cloud Automation Suite"/>
@@ -74,7 +58,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 
 ---
 
-## GitHub Stats &amp; Metrics
+## GitHub Stats
 
 <div align="center">
   <img src="assets/generated/metrics.svg" alt="GitHub Metrics" width="100%"/>
@@ -83,7 +67,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=dark&hide_border=true&background=0A1120&ring=3B82F6&fire=60A5FA&currStreakNum=ffffff&sideNums=94A3B8&currStreakLabel=3B82F6&dates=64748b" height="185" alt="GitHub Streak"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kaarthicraja&theme=dark&hide_border=true&background=0A0A0A&ring=E8A33D&fire=E8A33D&currStreakNum=EAEAEA&sideNums=8A8A8A&currStreakLabel=E8A33D&dates=555555" height="185" alt="GitHub Streak"/>
 </div>
 
 ---
@@ -91,7 +75,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 ## Contribution Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaarthicraja&bg_color=0A1120&color=3B82F6&line=60A5FA&point=ffffff&hide_border=true&area=true&area_color=3B82F6" width="100%" alt="Activity Graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaarthicraja&bg_color=0A0A0A&color=E8A33D&line=E8A33D&point=EAEAEA&hide_border=true&area=true&area_color=E8A33D" width="100%" alt="Activity Graph"/>
 </div>
 
 ---
@@ -122,35 +106,29 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=kaarthicraja&color=3B82F6&style=for-the-badge&label=PROFILE+VIEWS)
+![Profile Views](https://komarev.com/ghpvc/?username=kaarthicraja&color=E8A33D&style=for-the-badge&label=PROFILE+VIEWS)
 &nbsp;
-![Followers](https://img.shields.io/github/followers/kaarthicraja?color=60A5FA&style=for-the-badge&label=FOLLOWERS&logo=github)
+![Followers](https://img.shields.io/github/followers/kaarthicraja?color=E8A33D&style=for-the-badge&label=FOLLOWERS&logo=github)
 &nbsp;
-![Stars](https://img.shields.io/github/stars/kaarthicraja?color=22D3EE&style=for-the-badge&label=TOTAL+STARS&logo=github)
+![Stars](https://img.shields.io/github/stars/kaarthicraja?color=B87D2E&style=for-the-badge&label=TOTAL+STARS&logo=github)
 
 </div>
 
 ---
 
-## Let's Connect
+## Connect
 
 <div align="center">
-  <img src="assets/animations/social-icons.svg" alt="Social Media Icons" width="55%"/>
+  <img src="assets/animations/social-icons.svg" alt="Social Links" width="55%"/>
 </div>
 
 <br>
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-3B82F6?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kaarthicraja)
-[![GitHub](https://img.shields.io/badge/GitHub-0A1120?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaarthicraja)
-[![Twitter](https://img.shields.io/badge/Twitter-3B82F6?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/kaarthicraja)
-[![Email](https://img.shields.io/badge/Email-3B82F6?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaarthicraja@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-141414?style=for-the-badge&logo=linkedin&logoColor=e8a33d)](https://linkedin.com/in/kaarthicraja)
+[![GitHub](https://img.shields.io/badge/GitHub-141414?style=for-the-badge&logo=github&logoColor=e8a33d)](https://github.com/kaarthicraja)
+[![Twitter](https://img.shields.io/badge/Twitter-141414?style=for-the-badge&logo=twitter&logoColor=e8a33d)](https://twitter.com/kaarthicraja)
+[![Email](https://img.shields.io/badge/Email-141414?style=for-the-badge&logo=gmail&logoColor=e8a33d)](mailto:kaarthicraja@gmail.com)
 
-</div>
-
----
-
-<div align="center">
-  <img src="assets/animations/footer-wave.svg" alt="" width="100%"/>
 </div>

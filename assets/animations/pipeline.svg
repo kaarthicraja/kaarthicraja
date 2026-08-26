@@ -1,121 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="800" height="160">
   <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <style>.mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace; }</style>
     <marker id="arrow" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-      <polygon points="0 0, 6 2.5, 0 5" fill="#3b82f6"/>
+      <polygon points="0 0, 6 2.5, 0 5" fill="#8a8a8a"/>
     </marker>
-    <!-- Stage base color + glow versions -->
   </defs>
-  <rect width="800" height="160" fill="#0a1120" rx="8"/>
-  <rect x="1" y="1" width="798" height="158" fill="none" stroke="#3b82f6" stroke-width="1" rx="8" opacity="0.2"/>
-  <text x="400" y="18" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8" text-anchor="middle">// CI/CD Pipeline</text>
 
-  <!--
-    Stages illuminate sequentially. Each stage box lights up for ~2s, then dims.
-    Total cycle: 12s (2s per stage × 6 stages)
-  -->
+  <rect width="800" height="160" fill="#0a0a0a"/>
+  <rect x="0.5" y="0.5" width="799" height="159" fill="none" stroke="#2a2a2a"/>
+  <text x="16" y="18" class="mono" font-size="10" letter-spacing="2" fill="#555555">[ CI/CD PIPELINE ]</text>
+  <line x1="0" y1="28" x2="800" y2="28" stroke="#2a2a2a" stroke-width="1"/>
 
-  <!-- Stage positions: x = 30, 155, 280, 405, 530, 655  -->
-
-  <!-- ── Stage 1: Code ── -->
-  <rect x="30" y="50" width="105" height="65" rx="8" fill="#0d1830">
-    <animate attributeName="fill" values="#0d1830;#0d1830;#14213d;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
+  <!-- Stage positions: x = 30, 155, 280, 405, 530, 655 -->
+  <!-- Stage 1: CODE -->
+  <rect x="30" y="55" width="105" height="65" fill="#141414" stroke="#2a2a2a" stroke-width="1.5">
+    <animate attributeName="stroke" values="#2a2a2a;#2a2a2a;#e8a33d;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <rect x="30" y="50" width="105" height="65" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5">
-    <animate attributeName="stroke-opacity" values="0.2;0.2;1;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
-    <animate attributeName="filter" values="none;none;url(#glow);none;none;none;none;none;none;none;none;none;none" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="82" y="85" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="22" text-anchor="middle">💻</text>
-  <text x="82" y="105" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#e2e8f0" text-anchor="middle">Code</text>
+  <text x="82" y="82" class="mono" font-size="10" letter-spacing="1" fill="#555555" text-anchor="middle">01</text>
+  <text x="82" y="102" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea" text-anchor="middle">CODE</text>
+  <line x1="135" y1="87" x2="155" y2="87" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Connector 1→2 -->
-  <line x1="135" y1="82" x2="155" y2="82" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)">
-    <animate attributeName="opacity" values="0.2;0.2;1;1;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.15;0.22;0.28;0.33;0.42;0.5;0.58;0.67;0.75;0.83;1" dur="12s" repeatCount="indefinite"/>
-    <animate attributeName="stroke-dashoffset" values="20;0;0;0;0" keyTimes="0;0.15;0.25;0.9;1" dur="12s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- ── Stage 2: Build ── -->
-  <rect x="155" y="50" width="105" height="65" rx="8" fill="#0d1830">
-    <animate attributeName="fill" values="#0d1830;#0d1830;#0d1830;#14213d;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
+  <!-- Stage 2: BUILD -->
+  <rect x="155" y="55" width="105" height="65" fill="#141414" stroke="#2a2a2a" stroke-width="1.5">
+    <animate attributeName="stroke" values="#2a2a2a;#2a2a2a;#2a2a2a;#e8a33d;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <rect x="155" y="50" width="105" height="65" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5">
-    <animate attributeName="stroke-opacity" values="0.2;0.2;0.2;1;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="207" y="85" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="22" text-anchor="middle">🔨</text>
-  <text x="207" y="105" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Build</text>
+  <text x="207" y="82" class="mono" font-size="10" letter-spacing="1" fill="#555555" text-anchor="middle">02</text>
+  <text x="207" y="102" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea" text-anchor="middle">BUILD</text>
+  <line x1="260" y1="87" x2="280" y2="87" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Connector 2→3 -->
-  <line x1="260" y1="82" x2="280" y2="82" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)">
-    <animate attributeName="opacity" values="0.2;0.2;0.2;1;1;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.22;0.28;0.33;0.42;0.5;0.58;0.67;0.75;0.83;1" dur="12s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- ── Stage 3: Test ── -->
-  <rect x="280" y="50" width="105" height="65" rx="8" fill="#0d1830">
-    <animate attributeName="fill" values="#0d1830;#0d1830;#0d1830;#0d1830;#14213d;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
+  <!-- Stage 3: TEST -->
+  <rect x="280" y="55" width="105" height="65" fill="#141414" stroke="#2a2a2a" stroke-width="1.5">
+    <animate attributeName="stroke" values="#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#e8a33d;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <rect x="280" y="50" width="105" height="65" rx="8" fill="none" stroke="#22d3ee" stroke-width="1.5">
-    <animate attributeName="stroke-opacity" values="0.2;0.2;0.2;0.2;1;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="332" y="85" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="22" text-anchor="middle">🧪</text>
-  <text x="332" y="105" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#22d3ee" text-anchor="middle">Test</text>
+  <text x="332" y="82" class="mono" font-size="10" letter-spacing="1" fill="#555555" text-anchor="middle">03</text>
+  <text x="332" y="102" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea" text-anchor="middle">TEST</text>
+  <line x1="385" y1="87" x2="405" y2="87" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Connector 3→4 -->
-  <line x1="385" y1="82" x2="405" y2="82" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)">
-    <animate attributeName="opacity" values="0.2;0.2;0.2;0.2;1;1;0.2;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.30;0.38;0.45;0.5;0.58;0.67;0.75;0.83;1" dur="12s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- ── Stage 4: Docker ── -->
-  <rect x="405" y="50" width="105" height="65" rx="8" fill="#0d1830">
-    <animate attributeName="fill" values="#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#14213d;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
+  <!-- Stage 4: PACKAGE -->
+  <rect x="405" y="55" width="105" height="65" fill="#141414" stroke="#2a2a2a" stroke-width="1.5">
+    <animate attributeName="stroke" values="#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#e8a33d;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <rect x="405" y="50" width="105" height="65" rx="8" fill="none" stroke="#2496ED" stroke-width="1.5">
-    <animate attributeName="stroke-opacity" values="0.2;0.2;0.2;0.2;0.2;0.2;1;0.2;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="457" y="85" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="22" text-anchor="middle">🐳</text>
-  <text x="457" y="105" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#2496ED" text-anchor="middle">Docker</text>
+  <text x="457" y="82" class="mono" font-size="10" letter-spacing="1" fill="#555555" text-anchor="middle">04</text>
+  <text x="457" y="102" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea" text-anchor="middle">PACKAGE</text>
+  <line x1="510" y1="87" x2="530" y2="87" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Connector 4→5 -->
-  <line x1="510" y1="82" x2="530" y2="82" stroke="#2496ED" stroke-width="2" marker-end="url(#arrow)">
-    <animate attributeName="opacity" values="0.2;0.2;0.2;0.2;0.2;0.2;1;1;0.2;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.47;0.55;0.62;0.67;0.75;0.83;1" dur="12s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- ── Stage 5: Deploy ── -->
-  <rect x="530" y="50" width="105" height="65" rx="8" fill="#0d1830">
-    <animate attributeName="fill" values="#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#14213d;#0d1830;#0d1830;#0d1830;#0d1830" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
+  <!-- Stage 5: DEPLOY -->
+  <rect x="530" y="55" width="105" height="65" fill="#141414" stroke="#2a2a2a" stroke-width="1.5">
+    <animate attributeName="stroke" values="#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#e8a33d;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <rect x="530" y="50" width="105" height="65" rx="8" fill="none" stroke="#818cf8" stroke-width="1.5">
-    <animate attributeName="stroke-opacity" values="0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;1;0.2;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.75;0.83;0.92;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="582" y="85" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="22" text-anchor="middle">🚀</text>
-  <text x="582" y="105" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#818cf8" text-anchor="middle">Deploy</text>
+  <text x="582" y="82" class="mono" font-size="10" letter-spacing="1" fill="#555555" text-anchor="middle">05</text>
+  <text x="582" y="102" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea" text-anchor="middle">DEPLOY</text>
+  <line x1="635" y1="87" x2="655" y2="87" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Connector 5→6 -->
-  <line x1="635" y1="82" x2="655" y2="82" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow)">
-    <animate attributeName="opacity" values="0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;1;1;0.2;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.63;0.72;0.78;0.83;1" dur="12s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- ── Stage 6: Monitor ── -->
-  <rect x="655" y="50" width="105" height="65" rx="8" fill="#0d1830">
-    <animate attributeName="fill" values="#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#0d1830;#14213d;#14213d;#0d1830;#0d1830" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.72;0.80;0.87;1" dur="12s" repeatCount="indefinite"/>
+  <!-- Stage 6: MONITOR -->
+  <rect x="655" y="55" width="105" height="65" fill="#141414" stroke="#2a2a2a" stroke-width="1.5">
+    <animate attributeName="stroke" values="#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#2a2a2a;#e8a33d;#e8a33d;#2a2a2a;#2a2a2a" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.72;0.80;0.87;1" dur="12s" repeatCount="indefinite"/>
   </rect>
-  <rect x="655" y="50" width="105" height="65" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5">
-    <animate attributeName="stroke-opacity" values="0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;0.2;1;1;0.2;0.2" keyTimes="0;0.08;0.17;0.25;0.33;0.42;0.5;0.58;0.67;0.72;0.80;0.87;1" dur="12s" repeatCount="indefinite"/>
-  </rect>
-  <text x="707" y="85" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="22" text-anchor="middle">📊</text>
-  <text x="707" y="105" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="12" fill="#3b82f6" text-anchor="middle">Monitor</text>
+  <text x="707" y="82" class="mono" font-size="10" letter-spacing="1" fill="#555555" text-anchor="middle">06</text>
+  <text x="707" y="102" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea" text-anchor="middle">MONITOR</text>
 
-  <!-- Status text bottom -->
-  <text x="400" y="148" font-family="'JetBrains Mono','JetBrains Mono',monospace" font-size="11" fill="#5b7ca8" text-anchor="middle">
-    <animate attributeName="textContent" values="● Initializing...;● Compiling source...;● Running tests...;● Building image...;● Deploying to k8s...;● Monitoring services...;● Pipeline complete ✓" keyTimes="0;0.17;0.33;0.5;0.67;0.75;0.85" dur="12s" repeatCount="indefinite"/>● Pipeline active
+  <!-- Status text -->
+  <line x1="0" y1="132" x2="800" y2="132" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="16" y="150" class="mono" font-size="10" letter-spacing="1" fill="#8a8a8a">
+    <animate attributeName="textContent" values="&gt;&gt;&gt; INITIALIZING...;&gt;&gt;&gt; COMPILING SOURCE...;&gt;&gt;&gt; RUNNING TESTS...;&gt;&gt;&gt; BUILDING IMAGE...;&gt;&gt;&gt; DEPLOYING TO K8S...;&gt;&gt;&gt; MONITORING SERVICES...;&gt;&gt;&gt; PIPELINE COMPLETE" keyTimes="0;0.17;0.33;0.5;0.67;0.75;0.85" dur="12s" repeatCount="indefinite"/>&gt;&gt;&gt; PIPELINE ACTIVE
   </text>
 
-  <!-- Animated progress dot -->
-  <circle r="4" fill="#3b82f6" filter="url(#glow)">
+  <!-- Progress dot -->
+  <circle r="3.5" fill="#e8a33d">
     <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear"
-      path="M 82,82 L 155,82 L 207,82 L 280,82 L 332,82 L 405,82 L 457,82 L 530,82 L 582,82 L 655,82 L 707,82"/>
+      path="M 82,87 L 155,87 L 207,87 L 280,87 L 332,87 L 405,87 L 457,87 L 530,87 L 582,87 L 655,87 L 707,87"/>
     <animate attributeName="opacity" values="0;1;1;1;1;1;1;1;1;1;1;0" keyTimes="0;0.05;0.15;0.28;0.42;0.55;0.65;0.72;0.80;0.87;0.93;1" dur="12s" repeatCount="indefinite"/>
   </circle>
 </svg>

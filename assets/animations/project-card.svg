@@ -1,48 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130" width="420" height="130">
   <defs>
-    <style>.mono { font-family: 'JetBrains Mono','JetBrains Mono',monospace; }</style>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#101c33"/>
-      <stop offset="100%" stop-color="#0a1120"/>
-    </linearGradient>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace; }
+      @keyframes pc-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+    </style>
   </defs>
 
-  <rect width="420" height="130" fill="url(#card-bg)" rx="12"/>
-  <!-- Neon border with glow -->
-  <rect x="1" y="1" width="418" height="128" fill="none" stroke="#3b82f6" stroke-width="1.5" rx="12" filter="url(#glow)" opacity="0.7">
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
-  </rect>
-  <!-- Top accent bar -->
-  <rect x="0" y="0" width="420" height="4" fill="#3b82f6" rx="12" opacity="0.8"/>
+  <rect width="420" height="130" fill="#0a0a0a"/>
+  <rect x="0.5" y="0.5" width="419" height="129" fill="none" stroke="#2a2a2a"/>
+  <line x1="0" y1="30" x2="420" y2="30" stroke="#2a2a2a" stroke-width="1"/>
 
-  <!-- Status badge -->
-  <rect x="330" y="15" width="75" height="20" fill="#22d3ee" rx="10" opacity="0.15"/>
-  <circle cx="342" cy="25" r="4" fill="#22d3ee">
-    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
-  </circle>
-  <text x="352" y="29" class="mono" font-size="10" fill="#22d3ee">ACTIVE</text>
+  <text x="16" y="20" class="mono" font-size="10" letter-spacing="2" fill="#555555">[ FEATURED PROJECT ]</text>
+  <circle cx="392" cy="15" r="3" fill="#4af626" style="animation: pc-blink 1.5s step-end infinite"/>
+  <text x="383" y="19" class="mono" font-size="9" letter-spacing="1" fill="#4af626" text-anchor="end">ACTIVE</text>
 
-  <!-- Project title -->
-  <text x="20" y="40" class="mono" font-size="16" fill="#3b82f6" font-weight="bold">Cloud Automation Suite</text>
+  <text x="16" y="54" class="mono" font-size="16" font-weight="bold" fill="#eaeaea">CLOUD AUTOMATION SUITE</text>
+  <text x="16" y="74" class="mono" font-size="11" fill="#8a8a8a">Infra automation with Terraform modules</text>
+  <text x="16" y="88" class="mono" font-size="11" fill="#8a8a8a">and self-healing CI/CD pipelines.</text>
 
-  <!-- Description -->
-  <text x="20" y="62" class="mono" font-size="11" fill="#7b93b8">Cloud infrastructure automation with</text>
-  <text x="20" y="76" class="mono" font-size="11" fill="#7b93b8">Terraform modules and CI/CD pipelines.</text>
-
-  <!-- Tags -->
-  <rect x="20" y="90" width="55" height="18" fill="#101c33" rx="9" stroke="#3b82f6" stroke-width="1" opacity="0.6"/>
-  <text x="48" y="103" class="mono" font-size="10" fill="#3b82f6" text-anchor="middle">Python</text>
-
-  <rect x="82" y="90" width="42" height="18" fill="#101c33" rx="9" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
-  <text x="103" y="103" class="mono" font-size="10" fill="#60a5fa" text-anchor="middle">AI</text>
-
-  <rect x="132" y="90" width="55" height="18" fill="#101c33" rx="9" stroke="#22d3ee" stroke-width="1" opacity="0.6"/>
-  <text x="159" y="103" class="mono" font-size="10" fill="#22d3ee" text-anchor="middle">CLI</text>
-
-  <!-- Stars count -->
-  <text x="350" y="103" class="mono" font-size="12" fill="#facc15">★ 42</text>
+  <line x1="0" y1="100" x2="420" y2="100" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="16" y="118" class="mono" font-size="10" letter-spacing="1" fill="#e8a33d">PYTHON</text>
+  <text x="90" y="118" class="mono" font-size="10" letter-spacing="1" fill="#e8a33d">AI</text>
+  <text x="125" y="118" class="mono" font-size="10" letter-spacing="1" fill="#e8a33d">CLI</text>
+  <text x="404" y="118" class="mono" font-size="12" fill="#eaeaea" text-anchor="end">&#9733; 42</text>
 </svg>

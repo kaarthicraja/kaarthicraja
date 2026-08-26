@@ -93,18 +93,16 @@ All SVGs in `assets/animations/` use **SMIL (Synchronized Multimedia Integration
 
 | File | Purpose | Key Animation |
 |------|---------|---------------|
-| `assets/banner.svg` | Hero nameplate card | Underline sweep, status pulse |
+| `assets/banner.svg` | Hero dossier header | Underline sweep, scanline, status pulse |
 | `animations/typing.svg` | Cycling role titles | Clip-path typewriter reveal |
-| `animations/hero-background.svg` | Ambient grid + glow | Scanning line, ellipse breathe |
-| `animations/skills.svg` | Tech stack icon grid | Ring pulse per icon |
-| `animations/dashboard.svg` | Engineering metrics panel | Bar fill, live counters |
-| `animations/pipeline.svg` | CI/CD flow diagram | `<animateMotion>` dot traversal |
-| `animations/earth.svg` | Rotating globe | Land mass translate |
-| `animations/project-card.svg` | Project showcase card | Status badge pulse |
-| `animations/timeline.svg` | Career milestones | Node pulse, opacity breathe |
-| `animations/social-icons.svg` | Contact icons | Stroke color cycle |
-| `animations/footer-wave.svg` | Closing wave | x-translate two layers |
-| `terminal.svg` | Live terminal simulation | `textLength` typewriter, cursor travel |
+| `animations/skills.svg` | Tech stack data grid | Per-cell status dot pulse |
+| `animations/dashboard.svg` | Engineering metrics panel | Bar fill, live counters, commit bars |
+| `animations/pipeline.svg` | CI/CD flow diagram | `<animateMotion>` dot traversal, stage highlight |
+| `animations/project-card.svg` | Project showcase card | Status dot pulse |
+| `animations/timeline.svg` | Career log | Marker pulse |
+| `animations/social-icons.svg` | Contact link grid | Border pulse cycle |
+
+There is deliberately no terminal simulation, no rotating globe, and no footer wave — they didn't fit the disciplined, single-accent industrial-dossier direction and were cut in the second redesign pass (2026-08).
 
 ---
 
@@ -114,7 +112,7 @@ Each component is designed to be **independently replaceable**:
 
 - To swap the banner: replace `assets/banner.svg`
 - To add a new quote: add an object to `quotes.json`
-- To change the color scheme: find/replace the palette across `assets/` — base `#0a1120`/`#060a17`, accents `#3b82f6` (blue), `#60a5fa` (light blue), `#22d3ee` (cyan)
+- To change the color scheme: find/replace the palette across `assets/` (see Design System below)
 - To add a new icon: drop an SVG into `assets/icons/` and reference it in `README.md`
 
 The `assets/generated/` folder should **never be manually edited** — its contents are always overwritten by the automation workflows.
@@ -123,12 +121,18 @@ The `assets/generated/` folder should **never be manually edited** — its conte
 
 ## 🎨 Design System
 
+Industrial/tactical-telemetry direction: near-black background, sharp 90° corners (no `rx`), solid 1px hairline borders instead of glow/blur, monospace-first typography, and exactly **one** accent color.
+
 | Token | Value | Usage |
 |-------|-------|-------|
-| Background | `#0d0f14` | SVG backgrounds |
-| Surface | `#1a1b26` | Cards, panels |
-| Cyan (primary) | `#00f3ff` | Main glow, borders |
-| Purple (accent) | `#bb9af7` | Secondary highlights |
-| Green (success) | `#00ff9f` | Status, activity |
-| Amber (warmth) | `#f7a928` | Stars, output nodes |
-| Font | `Courier New`, monospace | All SVG text |
+| Background | `#0a0a0a` | SVG backgrounds |
+| Panel | `#141414` | Cards, bars, cells |
+| Border | `#2a2a2a` | Hairline dividers, frames |
+| Text (primary) | `#eaeaea` | Headlines, values |
+| Text (secondary) | `#8a8a8a` | Labels, metadata |
+| Text (muted) | `#555555` | Micro-labels, dividers |
+| Accent (amber) | `#e8a33d` | The one accent — bars, rules, active states |
+| Status green | `#4af626` | Single-use only — the "available"/"live" dot, nowhere else |
+| Font | `JetBrains Mono` / `IBM Plex Mono`, monospace | All SVG text |
+
+Do not introduce a second accent color or reintroduce `border-radius`/blur filters — that mix is what made the first redesign pass read as generic AI output.

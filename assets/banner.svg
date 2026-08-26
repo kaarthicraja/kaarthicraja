@@ -1,164 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
   <defs>
-    <linearGradient id="bn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#050810"/>
-      <stop offset="45%"  stop-color="#0a1428"/>
-      <stop offset="100%" stop-color="#050810"/>
-    </linearGradient>
-
-    <linearGradient id="bn-panel" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#0c1730" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#08101f" stop-opacity="0.9"/>
-    </linearGradient>
-
-    <linearGradient id="bn-underline" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#60a5fa" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </linearGradient>
-
-    <radialGradient id="bn-glow-a" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="bn-glow-b" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </radialGradient>
-
-    <pattern id="bn-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.06"/>
-    </pattern>
-
-    <filter id="bn-soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2"/>
-    </filter>
-
     <style>
-      .bn-name {
-        font-family: 'Segoe UI', Inter, sans-serif;
-        font-size: 42px;
-        font-weight: 800;
-        fill: #f1f5f9;
-        letter-spacing: 4px;
-      }
-      .bn-role {
-        font-family: 'Segoe UI', Inter, sans-serif;
-        font-size: 15.5px;
-        font-weight: 600;
-        fill: #93c5fd;
-        letter-spacing: 3px;
-      }
-      .bn-tag {
-        font-family: 'Segoe UI', Inter, sans-serif;
-        font-size: 13px;
-        fill: #64748b;
-      }
-      .bn-pill-text {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
-        font-size: 11.5px;
-        font-weight: 600;
-        fill: #bcd4f6;
-      }
-      .bn-status-text {
-        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
-        font-size: 12px;
-        font-weight: 600;
-        fill: #22d3ee;
-        letter-spacing: 1px;
-      }
-      @keyframes bn-pulse {
-        0%, 100% { opacity: 1; }
-        50%      { opacity: 0.35; }
-      }
-      .bn-dot { animation: bn-pulse 2s ease-in-out infinite; }
+      .mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace; }
+      .head { font-family: 'Arial Black', 'Segoe UI', Inter, sans-serif; font-weight: 900; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+      .dot { animation: blink 1.6s step-end infinite; }
     </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="url(#bn-bg)"/>
-  <rect width="100%" height="100%" fill="url(#bn-grid)"/>
+  <rect width="1000" height="300" fill="#0a0a0a"/>
 
-  <!-- Ambient glow orbs, slow drift -->
-  <ellipse cx="180" cy="60" rx="220" ry="140" fill="url(#bn-glow-a)">
-    <animate attributeName="cx" values="180;230;180" dur="16s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="850" cy="250" rx="220" ry="140" fill="url(#bn-glow-b)">
-    <animate attributeName="cx" values="850;800;850" dur="18s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- Outer frame -->
+  <rect x="16" y="16" width="968" height="268" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
 
-  <!-- Card panel -->
-  <g transform="translate(160, 26)">
-    <rect x="0" y="0" width="680" height="248" rx="10" fill="url(#bn-panel)" stroke="#1e3a5f" stroke-width="1"/>
-    <rect x="0" y="0" width="680" height="248" rx="10" fill="none" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.25"/>
+  <!-- Slow mechanical scanline sweep -->
+  <rect x="16" y="16" width="968" height="1" fill="#e8a33d" opacity="0">
+    <animate attributeName="y" values="16;282;16" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.25;0" dur="10s" repeatCount="indefinite"/>
+  </rect>
 
-    <!-- Status badge -->
-    <g transform="translate(486, 22)">
-      <rect x="0" y="0" width="174" height="26" rx="13" fill="#08131f" stroke="#155e75" stroke-width="1"/>
-      <circle class="bn-dot" cx="17" cy="13" r="4" fill="#22d3ee"/>
-      <text class="bn-status-text" x="30" y="17">OPEN TO OPPORTUNITIES</text>
-    </g>
+  <!-- Top meta rule -->
+  <line x1="16" y1="46" x2="984" y2="46" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="36" y="35" class="mono" font-size="11" letter-spacing="2" fill="#8a8a8a">PROFILE // KAARTHIC-RAJA</text>
+  <text x="964" y="35" class="mono" font-size="11" letter-spacing="2" fill="#8a8a8a" text-anchor="end">REV 2026.08</text>
 
-    <!-- Name -->
-    <text class="bn-name" x="40" y="90">KAARTHIC RAJA</text>
+  <!-- Bottom meta rule -->
+  <line x1="16" y1="252" x2="984" y2="252" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="36" y="272" class="mono" font-size="11" letter-spacing="2" fill="#555555">LOCATION / REMOTE — INDIA</text>
+  <text x="964" y="272" class="mono" font-size="11" letter-spacing="2" fill="#555555" text-anchor="end">CONTACT / OPEN</text>
 
-    <!-- Animated underline sweep -->
-    <rect x="41" y="102" width="0" height="3" rx="1.5" fill="url(#bn-underline)">
-      <animate attributeName="width" values="0;300;300" keyTimes="0;0.5;1" dur="5s" repeatCount="indefinite"/>
-    </rect>
+  <!-- Headline -->
+  <text x="40" y="140" class="head" font-size="62" letter-spacing="-2" fill="#eaeaea">KAARTHIC RAJA</text>
+  <rect x="41" y="155" width="0" height="3" fill="#e8a33d">
+    <animate attributeName="width" values="0;300;300" keyTimes="0;0.5;1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="41" y="188" class="mono" font-size="15" letter-spacing="3" fill="#e8a33d">CLOUD &amp; DEVOPS ENGINEER</text>
 
-    <!-- Role -->
-    <text class="bn-role" x="41" y="132">CLOUD &amp; DEVOPS ENGINEER</text>
-    <text class="bn-tag" x="41" y="154">Building resilient cloud platforms, automated pipelines &amp; cross-platform apps.</text>
-
-    <!-- Divider -->
-    <line x1="40" y1="175" x2="640" y2="175" stroke="#16233b" stroke-width="1"/>
-
-    <!-- Stack pills, staggered fade-in -->
-    <g transform="translate(40, 194)">
-      <!-- pill template repeated -->
-      <g>
-        <rect x="0" y="0" width="66" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="33" y="17" text-anchor="middle">AWS</text>
-      </g>
-      <g transform="translate(78,0)">
-        <rect x="0" y="0" width="66" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0.3s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="33" y="17" text-anchor="middle">Azure</text>
-      </g>
-      <g transform="translate(156,0)">
-        <rect x="0" y="0" width="78" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0.6s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="39" y="17" text-anchor="middle">Docker</text>
-      </g>
-      <g transform="translate(246,0)">
-        <rect x="0" y="0" width="96" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="0.9s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="48" y="17" text-anchor="middle">Kubernetes</text>
-      </g>
-      <g transform="translate(354,0)">
-        <rect x="0" y="0" width="90" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="1.2s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="45" y="17" text-anchor="middle">Terraform</text>
-      </g>
-      <g transform="translate(456,0)">
-        <rect x="0" y="0" width="76" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="1.5s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="38" y="17" text-anchor="middle">Flutter</text>
-      </g>
-      <g transform="translate(544,0)">
-        <rect x="0" y="0" width="72" height="26" rx="13" fill="#0a1830" stroke="#1e3a5f" stroke-width="1">
-          <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" begin="1.8s" repeatCount="indefinite"/>
-        </rect>
-        <text class="bn-pill-text" x="36" y="17" text-anchor="middle">Python</text>
-      </g>
-    </g>
+  <!-- Status readout -->
+  <g transform="translate(700, 70)">
+    <rect x="0" y="0" width="248" height="60" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="14" y="20" class="mono" font-size="10" letter-spacing="2" fill="#555555">[ STATUS ]</text>
+    <circle class="dot" cx="18" cy="41" r="4" fill="#4af626"/>
+    <text x="30" y="45" class="mono" font-size="13" letter-spacing="1" fill="#eaeaea">AVAILABLE FOR HIRE</text>
   </g>
 </svg>

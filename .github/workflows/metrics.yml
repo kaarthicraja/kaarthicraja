@@ -47,14 +47,14 @@ jobs:
           user: kaarthicraja
           template: classic
           extras_css: |
-            h1, h2, h3 { color: #60a5fa !important; }
-            svg { color: #94a3b8 !important; }
+            h1, h2, h3 { color: #e8a33d !important; }
+            svg { color: #8a8a8a !important; }
             :root {
-              --color-calendar-graph-day-bg: #101c33;
-              --color-calendar-graph-day-L1-bg: #1e3a5f;
-              --color-calendar-graph-day-L2-bg: #3b82f6;
-              --color-calendar-graph-day-L3-bg: #60a5fa;
-              --color-calendar-graph-day-L4-bg: #22d3ee;
+              --color-calendar-graph-day-bg: #141414;
+              --color-calendar-graph-day-L1-bg: #3a2a10;
+              --color-calendar-graph-day-L2-bg: #6b4a1a;
+              --color-calendar-graph-day-L3-bg: #b87d2e;
+              --color-calendar-graph-day-L4-bg: #e8a33d;
             }
           base: header, community, repositories
           base_indepth: yes
