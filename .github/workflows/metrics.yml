@@ -45,7 +45,16 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: kaarthicraja
           template: classic
-          config_theme: nord
+          extras_css: |
+            h1, h2, h3 { color: #60a5fa !important; }
+            svg { color: #94a3b8 !important; }
+            :root {
+              --color-calendar-graph-day-bg: #101c33;
+              --color-calendar-graph-day-L1-bg: #1e3a5f;
+              --color-calendar-graph-day-L2-bg: #3b82f6;
+              --color-calendar-graph-day-L3-bg: #60a5fa;
+              --color-calendar-graph-day-L4-bg: #22d3ee;
+            }
           base: header, activity, community, repositories
           base_indepth: yes
           config_timezone: Asia/Kolkata
