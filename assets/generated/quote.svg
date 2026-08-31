@@ -14,10 +14,10 @@
 
   <!-- Quote text -->
   <text x="60" y="69" class="mono" font-size="18" fill="#eaeaea" font-weight="bold">
-    <tspan x="60" dy="0">Simplicity is the soul of efficiency.</tspan>
+    <tspan x="60" dy="0">Make it work, make it right, make it fast.</tspan>
   </text>
 
   <!-- Author -->
   <text x="750" y="118" class="mono" font-size="14" letter-spacing="1" fill="#e8a33d"
-        text-anchor="end">— AUSTIN FREEMAN</text>
+        text-anchor="end">— KENT BECK</text>
 </svg>
