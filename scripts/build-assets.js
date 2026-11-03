@@ -47,15 +47,22 @@ const ROLE = 'AI & Automation Engineer';
 const ROLE_2 = ' · Full-Stack Developer';
 const TYPING = [
   'building LLM agents that do real work',
-  'turning voice notes into documents',
-  'automating WhatsApp & n8n workflows',
+  'automating workflows end to end',
   'shipping Next.js + TypeScript apps',
+  'self-hosting on Linux with Docker',
 ];
-const FLOW = [
-  { label: 'INPUT', value: 'voice note · chat' },
-  { label: 'AGENT', value: 'LLM · tool calls', hot: true },
-  { label: 'OUTPUT', value: 'PDF · CRM · reply' },
+// Abstract node graph for the hero's right side. Deliberately label-free:
+// it must not describe any real (private) product's pipeline.
+const NODES = [
+  [628, 92], [704, 72], [786, 98], [652, 158], [736, 150], [800, 168],
+  [624, 226], [700, 236], [776, 228],
 ];
+const HUB = 4;
+const EDGES = [
+  [0, 1], [1, 2], [0, 3], [1, 4], [2, 4], [3, 4], [4, 5], [2, 5],
+  [3, 6], [3, 7], [4, 7], [4, 8], [5, 8], [6, 7], [7, 8],
+];
+const PULSES = [[0, 3, 4], [2, 4, 7], [6, 7, 4], [1, 4, 8], [5, 4, 3]]; // node paths
 
 function hero() {
   const H = 300;
@@ -83,22 +90,29 @@ function hero() {
   </g>`;
   }).join('');
 
-  const bx = 604, bw = 204, bh = 46, by = [68, 138, 208], cx = bx + bw / 2;
-  const flow = FLOW.map((f, i) => `
-  <g transform="translate(${bx},${by[i]})">
-    <rect width="${bw}" height="${bh}" fill="${C.panel}" stroke="${f.hot ? C.accent : C.line}"/>
-    <text x="14" y="18" class="mono" font-size="10" letter-spacing="2" fill="${f.hot ? C.accent : C.mute}">${f.label}</text>
-    <text x="14" y="36" class="sans" font-size="14" fill="${C.text}">${esc(f.value)}</text>
-  </g>`).join('');
-  const links = [0, 1].map((i) => {
-    const y1 = by[i] + bh, y2 = by[i + 1];
+  const edges = EDGES.map(([a, b]) => {
+    const hot = a === HUB || b === HUB;
     return `
-  <line x1="${cx}" y1="${y1}" x2="${cx}" y2="${y2}" stroke="${C.line}"/>
-  <circle cx="${cx}" r="3" fill="${C.accent}">
-    <animate attributeName="cy" values="${y1};${y2}" dur="1.6s" begin="${i * 0.8}s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="1.6s" begin="${i * 0.8}s" repeatCount="indefinite"/>
+  <line x1="${NODES[a][0]}" y1="${NODES[a][1]}" x2="${NODES[b][0]}" y2="${NODES[b][1]}" stroke="${hot ? '#3a2c14' : C.line}"/>`;
+  }).join('');
+  const pulses = PULSES.map((p, i) => {
+    const d = 'M' + p.map((n) => NODES[n].join(',')).join(' L');
+    return `
+  <circle r="2.5" fill="${C.accent}" opacity="0">
+    <animateMotion path="${d}" dur="2.4s" begin="${i * 0.7}s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.4s" begin="${i * 0.7}s" repeatCount="indefinite"/>
   </circle>`;
   }).join('');
+  const nodes = NODES.map(([x, y], i) => i === HUB
+    ? `
+  <circle cx="${x}" cy="${y}" r="16" fill="none" stroke="${C.accent}" opacity="0.35">
+    <animate attributeName="r" values="9;20;9" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="${x}" cy="${y}" r="7" fill="${C.accent}"/>`
+    : `
+  <circle cx="${x}" cy="${y}" r="4" fill="${C.panel}" stroke="#4a4a4a"/>`).join('');
+  const graph = edges + pulses + nodes;
 
   write('assets/hero.svg', `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
@@ -124,7 +138,7 @@ ${frame(H)}
   <text x="32" y="178" class="sans" font-size="21" font-weight="600" fill="${C.accent}">${esc(ROLE)}<tspan fill="${C.body}" font-weight="400">${esc(ROLE_2)}</tspan></text>
 
   <text x="32" y="224" class="mono" font-size="15" fill="${C.accent}">$</text>${typing}
-${links}${flow}
+${graph}
 
   <line x1="1" y1="258" x2="${W - 1}" y2="258" stroke="${C.line}"/>
   <text x="32" y="284" class="mono" font-size="12" letter-spacing="2" fill="${C.dim}">INDIA · TAMIL / ENGLISH</text>
@@ -141,7 +155,7 @@ const FOCUS = [
   },
   {
     title: 'Workflow Automation',
-    points: ['WhatsApp bots & assistants', 'Voice note → document flows', 'n8n pipelines & job queues'],
+    points: ['WhatsApp bots & assistants', 'API integrations & webhooks', 'n8n pipelines & job queues'],
     tags: 'WHATSAPP · N8N · BULLMQ',
   },
   {
