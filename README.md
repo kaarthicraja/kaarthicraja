@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="Kaarthic Raja — Cloud &amp; DevOps Engineer" width="95%"/>
+  <img src="assets/banner.svg" alt="Kaarthic Raja — AI &amp; Automation Engineer, Full-Stack Developer" width="95%"/>
 </div>
 
 <div align="center">
@@ -12,15 +12,15 @@
 
 ## About
 
-I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that runs itself. I build automated cloud platforms, CI/CD pipelines, and cross-platform apps — this profile is one example, an animated portfolio generated entirely by its own GitHub Actions workflows.
+I'm **Kaarthic Raja**, an **AI & automation engineer** and full-stack developer from India. I build AI agents, LLM-powered products, web apps and automation for real businesses, and I take them all the way from the first commit to a self-hosted deploy.
 
-- Cloud architecture on **AWS** and **Azure**
-- **CI/CD automation** — Docker, Kubernetes, Terraform
-- Cross-platform apps with **Flutter**
-- **AI-driven automation** with Python and LLM pipelines
-- Linux-first workflow, comfortable end-to-end in the terminal
-
-> Automate everything. Ship fast. Stay curious.
+- **AI engineering**: LLM agents, structured extraction and speech-to-text, built on Claude, OpenAI, Gemini, Groq and local Ollama models
+- **Workflow automation**: WhatsApp bots, voice-note workflows and n8n pipelines that turn chat and voice into real work
+- **Full-stack web apps**: Next.js, React and TypeScript on Node.js / NestJS or Python backends
+- **Data**: PostgreSQL with Prisma, Redis for queues and background jobs
+- **Shipping**: Docker, PM2 and GitHub Actions, self-hosted on Linux
+- **Multilingual**: products that understand Tamil and English
+- **AI-native workflow**: Claude Code agents in the terminal every day
 
 ---
 
@@ -28,32 +28,6 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 
 <div align="center">
   <img src="assets/animations/skills.svg" alt="Tech Stack" width="95%"/>
-</div>
-
----
-
-## Metrics
-
-<div align="center">
-  <img src="assets/animations/dashboard.svg" alt="Engineering Metrics Dashboard" width="85%"/>
-</div>
-
----
-
-## Pipeline
-
-<div align="center">
-  <img src="assets/animations/pipeline.svg" alt="CI/CD Pipeline" width="95%"/>
-</div>
-
----
-
-## Project &amp; Career Log
-
-<div align="center">
-  <img src="assets/animations/project-card.svg" width="46%" alt="Cloud Automation Suite"/>
-  &nbsp;
-  <img src="assets/animations/timeline.svg" width="48%" alt="Career Timeline"/>
 </div>
 
 ---
@@ -111,16 +85,7 @@ I'm **Kaarthic Raja**, a Cloud & DevOps Engineer who designs infrastructure that
 ## Connect
 
 <div align="center">
-  <img src="assets/animations/social-icons.svg" alt="Social Links" width="55%"/>
-</div>
 
-<br>
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-141414?style=for-the-badge&logo=linkedin&logoColor=e8a33d)](https://linkedin.com/in/kaarthicraja)
 [![GitHub](https://img.shields.io/badge/GitHub-141414?style=for-the-badge&logo=github&logoColor=e8a33d)](https://github.com/kaarthicraja)
-[![Twitter](https://img.shields.io/badge/Twitter-141414?style=for-the-badge&logo=twitter&logoColor=e8a33d)](https://twitter.com/kaarthicraja)
-[![Email](https://img.shields.io/badge/Email-141414?style=for-the-badge&logo=gmail&logoColor=e8a33d)](mailto:kaarthicraja@gmail.com)
 
 </div>
