@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "generate-quote": "node scripts/generateQuote.js",
-    "lint": "echo 'No lint configured'"
+    "lint": "echo 'No lint configured'",
+    "build-assets": "node scripts/build-assets.js"
   },
   "engines": {
     "node": ">=18.0.0"
